@@ -6,18 +6,43 @@ layout: default
 
 <div class="main">
         <div class="content">
-          <h1 class="entry-title">{{ room.title }}   </h1> 
-        <img src="{{ room.image | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }} " alt="">          
+        <h2> Offers</h2>
+        <div class="offers-menu">
+            <ul>
+                {% assign rooms = site.rooms | sort: 'order' %}        
+                {% for room in rooms  %}
+                    <li>
+                        <a href="#{{ room.section }}" >{{ room.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <h1 id="{{ room.section }}" class="entry-title" >{{ room.title }}</h1> 
+        <img src="{{ room.image }} " alt="">          
         <p> {{ room.content }} </p>
-        <table>
-            {% tablerow season in site.data.season %}
-              {{ season.title }}
-            {% endtablerow %}
-            {% tablerow season in site.data.season %}
-              {{ season.row-1 }}
-            {% endtablerow %}
-        </table>
+        <div class="offers">
+            <ul>
+                    <li class="item">
+                        <h4>2 nights - {{ room.2nights-sale }}</h4>
+                        <h2><span>only</span>{{ room.2nights-offer }}</h2>
+                    </li >
+                    <li class="item">
+                         <h4>3 nights - {{ room.3nights-sale }}</h4>
+                        <h2><span>only</span>{{ room.3nights-offer }}</h2>
+                    </li>
+                    <li class="item" >
+                         <h4>5 nights - {{ room.5nights-sale }}</h4>
+                        <h2><span>only</span>{{ room.5nights-offer }}</h2>
+                    </li>
+                
+                </ul>
+            <p>*Prices Valid till 27 Sept '14, Breakfast not included</p>
+        </div>
     </div>
+    
+{% endfor %}
 </div>
 
-{% endfor %}
+
+
+</div>

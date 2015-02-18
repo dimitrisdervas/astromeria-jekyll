@@ -635,7 +635,10 @@ transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ea
 /*  */
 /* Room html */
 /*  */
-
+.room-slideshow {
+    @include full;
+    margin-bottom: 2em;
+}
 .offers {
     ul {
         @include full;
@@ -693,4 +696,10 @@ transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ea
 padding: 55px 0 50px;
     height:auto;
     
+}
+/*  */
+/* OFFERS */
+/*  */
+.offers-menu li {
+    @include gallery ( 2 of 10 );
 }
