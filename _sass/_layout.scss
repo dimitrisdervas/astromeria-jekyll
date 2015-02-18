@@ -12,7 +12,7 @@
         
     }
 #slider {
-    #include full;
+    @include full;
 }
 .main {
     @include container;
