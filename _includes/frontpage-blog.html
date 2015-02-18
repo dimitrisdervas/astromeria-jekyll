@@ -1,0 +1,12 @@
+        <section class="blog">
+            <h3>our blog</h3>
+            <div class="blog-list">
+            {% for blog in site.posts limit:1 %}
+               <img src="{{ blog.image  | prepend: 'assets/'  | prepend: site.baseurl | prepend: site.url }}" alt=""> 
+               <h1>
+                   <a href="{{ blog.url }}">{{ blog.title }}</a>
+                </h1>
+                <p>{{ blog.content }}</p>
+                {% endfor %}
+            </div>
+        </section>

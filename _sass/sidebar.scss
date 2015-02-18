@@ -1,0 +1,162 @@
+/* Sidebar */
+.offer-inside {
+    position: relative;
+    text-align: center;
+    color: #FFF;
+    transition: 0.18s;
+    .offer-content {
+        position: absolute;
+        margin: -90px 0 0;
+        left: 0;
+        right: 0;
+        padding: 0 36px;
+        text-align: center;
+        top: 50%;
+        h4 {
+            text-align: left;
+            color: #FFF;
+            font-size: 16px;
+            margin: 0 0 30px 0;
+        }
+        a.btn, a.btn:visited {
+            line-height: normal;
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #C2C2C2;
+            border-radius: 0;
+            vertical-align: middle;
+            padding: 12px 30px;
+            background: transparent;
+            outline: none;
+            transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+            }
+         a.btn, a.btn:visited {
+            display: inline-block;
+            border-color: #FFF;
+            color: #FFF;
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+    }
+}
+.social-block {
+    i {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        background-color: #D3D3D4;
+        color: #FFF;
+        border: 1px solid #D3D3D4;
+        font-size: 16px;
+        border-radius: 36px;
+        text-align: center;
+        display: inline-block;
+        &:hover {
+            background-color: #6C6C6C;
+        }
+    }
+}
+/* Newsletter */
+.ci-newsletter {
+    margin-bottom: 2em;
+    input {
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        padding: 12px 18px;
+        height: auto;
+        border: 2px solid #C2C2C2;
+        line-height: normal;
+        transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+        min-width: 80%;
+        color: #6d6e71;
+        background: transparent;
+        
+    }
+    button, input[type="submit"] {
+       padding: 0;
+        border: none;
+        width: auto;
+        height: auto;
+        position: absolute;
+        color: #6D6E71 !important;
+        background: none;
+    }
+}
+.sidebar {
+    .reviews {
+        margin-bottom: 2em;
+        .reviews-inside {
+            padding: 10px;
+            border: 1px solid #C2C2C2;
+        }
+         blockquote {
+            background-color: #1289d5;
+            text-align: left;
+            margin: 0;
+            padding: 35px 25px 50px;
+            line-height: normal;
+            position: relative;
+            font-weight: normal;
+            letter-spacing: -0.03em;
+            i.fa {
+                width: 100%;
+                text-align: center;
+                font-size: 64px;
+                color: #FFF;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 17px;
+                font-weight: normal;
+                color: #FFF;
+            }
+            cite {
+                font-size: 12px;
+                letter-spacing: 0;
+                color: #FFF;
+                font-style: normal;
+            }
+        }
+    }
+    .rooms-menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+            overflow: visible;
+        }
+        a, 
+        a:visited {
+            display: block;
+            background: #EBEBEB;
+            font-weight: bold;
+            color: #7b7b7b;
+            line-height: normal;
+            margin-bottom: 1px;
+            padding: 15px;
+            position: relative;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            background-color: #1289d5;
+            color: #FFF;
+            text-decoration: none;
+        }
+        .room-nav a.current-room:before {
+        content: "";
+        border: 24px solid transparent;
+        border-right-color: #EBEBEB;
+        border-right-width: 14px;
+        position: absolute;
+        left: -38px;
+        top: 0;
+        transition: 0.18s;
+        }
+    }
+}

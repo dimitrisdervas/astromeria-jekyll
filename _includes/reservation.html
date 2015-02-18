@@ -1,0 +1,58 @@
+<div class="booking-wrap">
+    <div class="booking">
+        <form class="b-form group" method="post" action="/">
+                <div class="arrival group">
+                    <input type="text" name="arrive" id="arrive" class="datepicker hasDatepicker" placeholder="arrive"><button type="button" class="ui-datepicker-trigger"><i class="fa fa-calendar"></i></button>
+                </div>
+                <div class="departure group">
+                    <input type="text" name="depart" id="depart" class="datepicker hasDatepicker" placeholder="depart"><button type="button" class="ui-datepicker-trigger"><i class="fa fa-calendar"></i></button>
+                </div>
+
+                <div class="adults group">
+                    <div class="dk_container dk_theme_ci dk" id="dk_container_adults" tabindex="0" aria-hidden="true" style="display: block;">
+<!--                         <a class="dk_toggle dk_label" style="width: 161px;">adults</a>
+                        <div class="dk_options" style="top: 45px;"><ul class="dk_options_inner" role="main" aria-hidden="true">
+                            <li><a data-dk-dropdown-value="1">1</a></li>
+                            <li><a data-dk-dropdown-value="2">2</a></li>
+                            <li><a data-dk-dropdown-value="3">3</a></li>
+                            <li><a data-dk-dropdown-value="4">4</a></li>
+                            </ul>
+                        </div> -->
+                        <select name="adults" id="adults" class="dk dk_theme_ci dk_toggle ">
+                        <option selected="" disabled="">adults</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></div>
+                </div>
+
+                <div class="room group">
+                    <div class="dk_container dk_theme_ci dk" id="dk_container_room" tabindex="0" aria-hidden="true" style="display: block;">
+<!--                         <a class="dk_toggle dk_label" style="width: 161px;">room</a>
+                        <div class="dk_options" style="top: 45px;">
+                            <ul class="dk_options_inner" role="main" aria-hidden="true">
+                                <li><a data-dk-dropdown-value="1">Single</a></li>
+                                <li><a data-dk-dropdown-value="2">Deluxe Double</a></li>
+                                <li><a data-dk-dropdown-value="3">Suite I</a></li>
+                                <li><a data-dk-dropdown-value="4">Suite II</a></li>
+                                <li><a data-dk-dropdown-value="5">King's Suite</a></li>
+                            </ul>
+                        </div> -->
+                        <select name="room" id="room" class="dk dk_theme_ci dk_toggle">
+                            <option selected="" disabled="">room</option>
+                            <option value="1">Single</option>
+                            <option value="2">Deluxe Double</option>
+                            <option value="3">Suite I</option>
+                            <option value="4">Suite II</option>
+                            <option value="5">King's Suite</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bookbtn group">
+                    <button type="submit">book now</button>
+                </div>
+            </form>
+        </div>
+    </div>

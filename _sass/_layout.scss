@@ -1,0 +1,43 @@
+.menu-inside {
+        @include container;
+        .menu-left {
+            @include span(5 of 12);        
+        }
+        .logo {
+            @include span(2 at 5  of 12);
+        }
+        .menu-right {
+            @include span(5 at 7 of 12 last);
+        }
+        
+    }
+#slider {
+    #include full;
+}
+.main {
+    @include container;
+}
+.content {
+    @include span(10 of 16);
+}
+.sidebar {
+    @include span(5 of 16 last);
+}
+.booking-wrap {
+    @include full;
+}
+.booking {
+    @include container;
+}
+.reviews {
+    @include container;
+    margin-bottom: 2em;
+}
+.frontpage-gallery {
+    @include container;
+    margin-bottom: 2em;
+    .item {
+    @include gallery(4 of 20);
+    }
+}
+

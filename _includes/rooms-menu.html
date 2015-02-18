@@ -1,0 +1,11 @@
+<div class="rooms-menu">
+    <ul>
+        {% assign rooms = site.rooms | sort: 'order' %}
+        
+    {% for room in rooms  %}
+        <li>
+            <a href="{{ room.url }}">{{ room.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+</div>

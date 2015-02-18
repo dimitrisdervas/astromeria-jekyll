@@ -1,0 +1,26 @@
+- title: Studio
+  href: "studio"
+
+- title: One bedroom
+  href: "onebedroom"
+  
+- title: Two bedroom
+  href: "twobedroom"
+  
+- title: Contact
+  href: "map"
+  
+- title: Booking
+  href: "booking"
+  
+- title: Reviews
+  href: "reviews"
+  
+- title: Rooms
+  href: "rooms"
+    
+- title: Blog
+  href: "blog"
+
+- title: Offers
+  herf: "offers"

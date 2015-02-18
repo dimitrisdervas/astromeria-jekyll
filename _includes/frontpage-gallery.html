@@ -1,0 +1,15 @@
+<section class="frontpage-gallery gallery" >
+    {% for room in site.rooms %}
+            <div class="item">
+                <div class="item-thumb">
+                    <a href="{{ room.url }}">
+                        <img src="{{ room.image }}" width="750" height="930" alt="Placeholder Image">
+                    </a>
+                </div>
+                <div class="item-content">
+                    <a class="item-title btn" href="{{ room.url }}">{{ room.title }}</a>
+                    <p>from {{ room.low }} / night</p>
+                </div>
+            </div>
+        {% endfor %}
+</section>

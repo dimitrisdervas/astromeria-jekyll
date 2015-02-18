@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+
+
+<div class="main">
+    
+<h2 class="page-title">{{ page.title }}</h2>
+    
+   {% include reviews.html %}
+    
+    
+     <section id="slider" class="flexslider">
+          <ul class="slides">
+              {% for image in site.data.slideshow %} 
+            <li>
+                <img src="{{ image.src | prepend: '/assets/' }}" alt="">
+                
+                <div class="slide-info">
+                    <h2 class="slide-title">{{ image.title }}</h2>
+                    <p>{{ image.subtitle }}</p>
+                </div>
+              </li>
+              {% endfor %}
+  	    	</ul>
+      </section>
+
+
+    <div class="content"> 
+        
+       {{ page.content }} 
+        <div class="offers">
+            <h3>offers</h3>
+            <ul>
+                    <li class="item">
+                        <h4>2 nights - {{ page.2nights-sale }}</h4>
+                        <h2><span>only</span>{{ page.2nights-offer }}</h2>
+                    </li >
+                    <li class="item">
+                         <h4>3 nights - {{ page.3nights-sale }}</h4>
+                        <h2><span>only</span>{{ page.3nights-offer }}</h2>
+                    </li>
+                    <li class="item" >
+                         <h4>5 nights - {{ page.5nights-sale }}</h4>
+                        <h2><span>only</span>{{ page.5nights-offer }}</h2>
+                    </li>
+                
+                </ul>
+            <p>*Prices Valid till 27 Sept '14, Breakfast not included</p>
+            <h3>prices</h3>
+            <div class="normal-prices">
+            <ul>
+                <li>
+                    <h3>Low Season</h3>
+                    <h4>12/2-13/6</h4>
+                    <h2>{{ page.low }}/night</h2>
+                </li>
+                <li>
+                    <h3>Medium Season</h3>
+                    <h4>12/2-13/6</h4>
+                    <h2>{{ page.medium }}/night</h2>
+                </li>
+                <li>
+                    <h3>High Season</h3>
+                    <h4>12/2-13/6</h4>
+                    <h2>{{ page.high }}/night</h2>
+                </li>
+            </ul>
+                <p>*Prices Valid till 27 Sept '14, Breakfast not included</p>
+            
+            </div>
+        </div>
+        
+     </div>
+ {% include sidebar.html %}
+</div>
+<div class="reservation-bottom">
+{% include reservation.html %}
+    </div>

@@ -1,0 +1,22 @@
+<header>
+  <div class="menu-inside">
+      <hr>
+        <div class="navigation menu-left">
+            <ul>
+              {% for menu in site.data.menu limit:3 %} 
+                <li><a  href="/{{ menu.href }}" >{{ menu.title }}</a></li>
+               {% endfor %}
+            </ul>
+            </div>
+            <div class="logo">
+            <a href="/"><img src="http://www.cssigniter.com/themeforest/santorini/images/dummy/logo_white.png" alt=""></a>
+                </div>
+            <div class="navigation menu-right">
+            <ul>
+              {% for menu in site.data.menu limit:3 offset: 3 %} 
+                <li><a  href="/{{ menu.href }}" >{{ menu.title }}</a></li>
+               {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </header>  

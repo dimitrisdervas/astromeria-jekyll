@@ -1,0 +1,696 @@
+---
+---
+/* start content */
+@import "susy-config";
+@import "sass-components";
+@import "include-css.css";
+@import "layout";
+@import "sidebar";
+/* Bootstrap buttons */
+
+
+/* Compass mixins */
+    
+@mixin no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+@mixin no-bullets {
+  list-style: none;
+  li {
+    @include no-bullet;
+  }
+}
+
+@mixin inline-list {
+  list-style-type: none;
+  &, & li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/BebasNeue Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/BebasNeue Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/BebasNeue Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/BebasNeue Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url('fonts/PTS55F-webfont.eot'); /* IE9 Compat Modes */
+  src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/PTS55F-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/PTS55F-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/PTS55F-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+/* -----------------------------------------
+	General
+----------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+  margin: 0 0 15px 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #6c6c6c; }
+
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 20px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+p {
+  margin: 0 0 15px 0; }
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
+
+a, a:visited {
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  outline: none; }
+
+a:active, a:focus {
+  outline: none;
+  text-decoration: none; }
+a {
+color: #428bca;
+text-decoration: none;
+}
+a:hover, a:focus {
+color: #2a6496;
+}
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.625;
+  font-size: 15px;
+  color: #1E1E1E; }
+
+ul {
+    list-style-type: none;
+}
+    
+/* Header */
+.frontpage header {
+    position: relative;
+    z-index: 10;
+    height: 230px;    
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    background: none;
+    padding:0;
+    li {
+            @include inline-list;
+        }
+}
+header {
+   background: url("http://www.cssigniter.com/preview/santorini/files/2014/03/header_image.jpg") no-repeat center top;
+   padding: 2em 0 5em;
+    li {
+            @include inline-list;
+        }
+}
+footer {
+    position: relative;
+    z-index: 10;
+    height: 230px;    
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #b4b4b4;
+    background: none;
+    li {
+            @include inline-list;
+        }
+}
+/* Navigation */
+.navigation {
+    a {
+        text-transform: uppercase;
+        margin: 5px 2em 5px 0em;
+        padding-bottom: 5px;
+        text-decoration: none;
+        line-height: 45px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    a:hover {
+        border-bottom: 1px solid #FFF; 
+    }
+}
+header .navigation {
+    a {
+        color: #ffffff;
+    }
+}
+footer .navigation {
+    a {
+        color: #b4b4b4;
+    }
+}
+header hr {
+background: none;
+border: none;
+margin: 10px 0 0 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+footer hr {
+margin-bottom: 40px;
+}
+hr {
+margin-top: 20px;
+margin-bottom: 20px;
+border: 0;
+border-top: 1px solid #eeeeee;
+}
+/* Slideshow */
+#slider {
+    margin: 0 0 -230px 0;
+    color: #FFF;
+    position: relative;
+    top: -231px;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+    border: medium none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+    background: none;
+    li {
+        width: 100%;
+        float: left;
+        margin-right: -100%;
+        position: relative;
+        opacity: 1;
+        display: block;
+        z-index: 2;        
+    }
+    .slide-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #FFF;
+    }
+    .slide-info {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 35%;
+    }
+    .flex-control-nav {
+        width: 20px;
+        bottom: auto;
+        z-index: 20;
+        top: 40%;
+        right: 20px;
+        li {
+            display: block;
+            margin: 0 0 5px 0;
+            height: auto;
+            a {
+                background: transparent;
+                border: 2px solid #FFF;
+                border-radius: 100%;
+                box-shadow: none;
+            }
+            a.flex-active,
+            a:hover {
+                background: #FFF;
+                border-color: #FFF;
+            }
+        }
+    }
+    .flex-control-paging li a {
+        background: transparent;
+        border: 2px solid #FFF;
+        border-radius: 100%;
+        box-shadow: none;
+    }
+}
+
+.slideshow-message {
+    z-index: 2000;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include container;
+    .slideshow-message-inside {        
+        position: absolute;
+        top: 8em;
+    }
+    h1 {
+        font-family: 'Bebas Neue','Montserrat',Arial;
+        background: #ef9a49;
+        margin: 0;
+        padding: 10px 10px;
+        line-height: 65px;
+        border: 0;
+        font-size: 5em;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    h3 {
+        font-family: 'PT Sans';
+        display: inline-block;
+        background: white;
+        color: #5f5f5f;
+        padding: 15px;
+        margin: 0;
+        border-bottom: 1px solid #d4d4d4;
+    }
+}
+/* Main */
+.main {
+    padding: 55px 0 0;
+    .content img,
+    .sidebar img{
+    padding: 10px;
+    border: 1px solid #C2C2C2;
+    transition: 0.18s;
+    margin: 0px 0 20px 0;
+    }
+}
+
+/* BLOG */
+.page-title {
+text-align: center;
+font-size: 48px;
+line-height: 1;
+margin-bottom: 35px;
+padding-bottom: 15px;
+}
+.entry-title {
+margin-bottom: 20px;
+}
+/* -----------------------------------------
+	Booking Form
+----------------------------------------- */
+.booking input[type=text],
+.booking input[type=email],
+.booking textarea, .booking .dk_container {
+  width: 100%;
+  margin-bottom: 25px; }
+
+
+.booking-wrap {
+  z-index: 15;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  height: 150px;
+  margin: -205px 0 0 0;
+  padding-top: 52px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    input[type="text"], 
+    input[type="password"], 
+    input[type="date"], 
+    input[type="datetime"], 
+    input[type="email"], 
+    input[type="number"], 
+    input[type="search"], 
+    input[type="tel"], 
+    input[type="time"], 
+    input[type="url"],
+    textarea {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 0;
+    box-shadow: none;
+    width: auto;
+    padding: 12px 18px;
+    height: auto;
+    border: 2px solid #C2C2C2;
+    line-height: normal;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+    min-width: 80%;
+    color: #6d6e71;
+    background: transparent;
+    }
+}
+/* Date */
+    .ui-datepicker-trigger {
+    position: absolute;
+    right: 28px;
+    border: none;
+    top: 7px;
+    background: none;
+    color: #C2C2C2;
+    font-size: 18px;
+    outline: none;
+    }
+.rd-container {
+    z-index: 20;   
+}
+/* Adults */
+.b-form select {
+    border: 2px solid #C2C2C2;
+}
+.dk_theme_ci .dk_toggle  {
+border: 2px solid #C2C2C2;
+color: #A9A9A9;
+outline: none;
+font-size: 14px;
+text-decoration: none;
+padding: 10px 18px;
+transition: 0.2s;
+position: relative;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+width: 100% !important;
+background: transparent;
+}
+.dk_theme_ci .dk_toggle:after {
+font-family: FontAwesome;
+line-height: normal;
+font-weight: normal;
+font-size: 12px;
+content: "\f078";
+position: absolute;
+top: 15px;
+right: 10px;
+}
+.b-form > div {
+  float: left;
+  margin-right: 2%; }
+.b-form .arrival,
+.b-form .departure {
+  width: 22%;
+  position: relative; }
+  .b-form .arrival .ui-datepicker-trigger, .b-form .departure .ui-datepicker-trigger {
+    color: rgba(255, 255, 255, 0.7);
+    right: 15px; }
+    .b-form .arrival .ui-datepicker-trigger:hover, .b-form .departure .ui-datepicker-trigger:hover {
+      color: #FFF !important; }
+.b-form .adults, .b-form .room {
+  width: 17%; }
+.b-form .bookbtn {
+  margin-right: 0;
+  width: 14%;
+  text-align: right; }
+.b-form input[type=text],
+.b-form select,
+.b-form input[type=submit] {
+  max-width: 100%; }
+.b-form input[type=text] {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7); }
+.b-form input[type=text]:focus {
+  border-color: #FFF;
+  color: #FFF; }
+.b-form button[type=submit] {
+  border: 2px solid #FFF;
+  color: #FFF;
+  padding: 0 18px 0;
+  line-height: normal;
+  height: 46px;
+  background: transparent;
+    &:hover {
+        border-color: #1289d5;
+        background-color: #1289d5;
+    }
+}
+.b-form ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s; }
+.b-form :-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+  opacity: 1; }
+.b-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+  opacity: 1; }
+.b-form :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s; }
+.b-form input[type=text]:focus::-webkit-input-placeholder {
+  color: #FFF; }
+.b-form input[type=text]:focus:-moz-placeholder {
+  /* Firefox 18- */
+  color: #FFF;
+  opacity: 1; }
+.b-form input[type=text]:focus::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #FFF;
+  opacity: 1; }
+.b-form input[type=text]:focus:-ms-input-placeholder {
+  color: #FFF; }
+.b-form select {
+  width: 100%; }
+
+.booking-inpage {
+  margin: 50px 0;
+  padding: 55px 0 50px; }
+
+#formerrors {
+  list-style: none;
+  padding: 10px;
+  margin: 0 0 40px;
+  border: 1px solid #C2C2C2; }
+  #formerrors li {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #6c6c6c; }
+  #formerrors li i {
+    margin-right: 5px;
+    color: #c2303c; }
+
+#formsuccess {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6c6c6c;
+  padding: 10px;
+  line-height: normal;
+  border: 1px solid #6c6c6c; }
+    
+  #formsuccess i {
+    margin-right: 10px; 
+  }
+
+
+/*  */
+/* Blockquote */
+/*  */
+.reviews {
+
+    blockquote {
+      text-align: center;
+      margin: 0;
+      padding: 0 0 30px 0;
+      line-height: normal;
+      position: relative;
+         &:after {
+          content: "";
+          width: 45px;
+          position: absolute;
+          height: 1px;
+          background: #E5E5E5;
+          bottom: 0;
+          left: 50%;
+          margin-left: -22px; }
+         i.fa {
+          font-size: 44px;
+          color: #E5E5E5;
+          margin-bottom: 15px; }
+         p {
+          letter-spacing: -0.03em;
+          font-family: Montserrat, sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          color: #6c6c6c; }
+         cite {
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 0.2em;
+          color: #8a8a8a;
+          font-style: normal;
+         }
+    }
+}
+/*  */
+/* Frontpage Gallery */
+/*  */
+/* -----------------------------------------
+	Item Styles
+----------------------------------------- */
+.item {
+  position: relative;
+  text-align: center;
+  color: #FFF;
+  transition: 0.18s;
+  margin: 0 0 40px 0; 
+   .item-thumb {
+    padding: 10px;
+    border: 1px solid #C2C2C2;
+    position: relative;
+   }
+     .item-thumb > a {
+      position: relative;
+      display: block;
+     transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+     }
+    .item-thumb > a:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      transition: background-color 0.18s ease; }
+   .offer {
+    position: absolute;
+    top: 10px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 7px 25px;
+    line-height: normal;
+    width: 130px;
+    left: 50%;
+    margin-left: -65px; }
+   a.btn,
+   a.btn:visited {
+    display: inline-block;
+    border-color: #FFF;
+    color: #FFF;
+    max-width: 60%;
+   }
+   a.btn:hover {
+    text-decoration: none; }
+  &:hover {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.18); 
+   .item-thumb > a:after {
+      background: rgba(0, 0, 0, 0.6); }
+    .overlay i {
+      opacity: 1; }
+  }
+  .item-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    top: 50%;
+    margin-top: -25px;
+  }
+   .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #FFF !important; 
+        i {
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        font-size: 34px;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        z-index: 15;
+        opacity: 0.8; }
+       }
+}
+/* Buttons */
+/*  */
+a.btn, a.btn:visited, input[type=submit] {
+line-height: normal;
+font-family: Montserrat, sans-serif;
+font-size: 14px;
+font-weight: bold;
+border: 2px solid #C2C2C2;
+border-radius: 0;
+vertical-align: middle;
+padding: 0.8em 1em;
+background: transparent;
+outline: none;
+transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+/*  */
+/* Room html */
+/*  */
+
+.offers {
+    ul {
+        @include full;
+        padding: 0;
+        .item  {
+        @include gallery (4 of 12);
+            border: 1px solid #C2C2C2;
+            margin: 0px 0 20px 0;
+            background: #fcfcfc;
+            h4 {
+                font-size: 2em;
+                padding: 15px 0 0 0;
+            }
+            h2 {
+                font-size: 3em;
+                color: #D33E93 ;
+            }
+            span {
+                padding-right: 0.3em;
+                font-size: 18px;
+                color: #6c6c6c;
+                padding-right: 0.3em;
+            }
+    }
+    }
+}
+.normal-prices {
+    ul{
+        @include full;        
+        padding: 0;
+        text-align: center;
+        li {            
+            @include gallery (4 of 12);            
+            background: #fcfcfc;
+            border: 1px solid #C2C2C2; 
+            color:#fff;
+            padding: 1em 0 0 0;
+            h4 {
+                padding: 0;
+                margin-bottom: 1em;
+            }
+            h3 {
+               margin: 0;
+                padding: 0;
+            }
+            h2 {
+                color: #4280A6 ;                           
+        }
+    }
+}
+}
+.reservation-bottom .booking-wrap {
+    background: url('http://www.cssigniter.com/preview/santorini/files/2014/03/booking_bg.jpg') no-repeat center center;
+    margin: 50px 0;
+padding: 55px 0 50px;
+    height:auto;
+    
+}
