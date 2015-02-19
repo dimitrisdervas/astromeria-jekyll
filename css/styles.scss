@@ -700,6 +700,15 @@ padding: 55px 0 50px;
 /*  */
 /* OFFERS */
 /*  */
-.offers-menu li {
-    @include gallery ( 2 of 10 );
+.offers-menu {
+    @include full;
+     li {
+        @include gallery ( 2 of 10 );
+    }
+}
+    .offer {
+        @include full;
+    }
+.offer-item{
+    @include gallery ( 2 of 4 );
 }
