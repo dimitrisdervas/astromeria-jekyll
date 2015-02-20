@@ -7,14 +7,13 @@
                 <div class="column-left">
                      <div class="rooms-img">
                         <div class="flexslider-rooms">
-                          <ul class="slides">                              
-                              {% capture appartment %} {{ room.section }} {% endcapture %}
-                              {% for image in site.data.[room.section] %}                             
+                          <ul class="slides">                            
+                              {% for image in room.images %}             
                                 <li data-thumb="{{ image.src | prepend: 'assets/thumbnails/'  | prepend: site.baseurl | prepend: site.url }}">
                                     {{ image.section }}
-                                  <img class="lazy" src="http://placehold.it/635x350/bada55/111&text=Loading..." data-src="{{ image.src | prepend: 'assets/' | prepend: site.baseurl | prepend: site.url  }}" width="662" height="445"/>
+                                  <img class="lazy" src="http://placehold.it/635x350/bada55/111&text=Loading..." data-src="{{ image.src | prepend: '/assets/wide/' | prepend: site.baseurl }}" width="662" height="445"/>
                                 </li>
-                               {% endfor %}
+                             {% endfor %}
                           </ul>
                         </div>
                     </div>

@@ -1,26 +1,13 @@
 ---
 layout: default
 ---
-
-
-
 <div class="main">
     <h2 class="page-title">Offers</h2>
- <div class="offers-menu">
-            <ul>
-                {% assign rooms = site.rooms | sort: 'order' %}        
-                {% for room in rooms  %}
-                    <li>
-                        <a href="#{{ room.section }}" >{{ room.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-       <section class="offer">
+        <section class="offer">
             {% for room in site.rooms %}
              <div class="offer-item">
                         
-                        <img src="{{ room.image }} " alt="">          
+                        <img src="{{ room.image | prepend: '/assets/wide/'  | prepend: site.baseurl }} " alt="">          
                         <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ room.url}}">{{ room.title }}</a></h1> 
                         <p> {{ room.content }} </p>
                         <div class="offers">

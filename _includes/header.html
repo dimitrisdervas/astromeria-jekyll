@@ -9,12 +9,12 @@
             </ul>
             </div>
             <div class="logo">
-            <a href="/"><img src="{{ site.baseurl}}/assets/logo_white.png" alt=""></a>
+            <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/assets/logo_white.png" alt=""></a>
                 </div>
             <div class="navigation menu-right">
             <ul>
               {% for menu in site.data.menu limit:3 offset: 3 %} 
-                <li><a  href="/{{ menu.href | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
+                <li><a  href="{{ menu.href | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
                {% endfor %}
             </ul>
             </div>

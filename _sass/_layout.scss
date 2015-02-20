@@ -4,16 +4,13 @@
             @include span(5 of 15);        
         }
         .logo {
-            @include span(5 at 5 of 15);
-             text-align: center;
+            @include span(4 at 5 of 15);
             img {
-            @include span(8 of 12);
-                margin: 0 auto;
-                di
+            @include span(9 of 12);
             }
         }
         .menu-right {
-            @include span(5 at 10 of 15 last);
+            @include span(5 at 8 of 15);
         }
         
     }

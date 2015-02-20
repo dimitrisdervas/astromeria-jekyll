@@ -358,7 +358,8 @@ border-top: 1px solid #eeeeee;
     padding: 55px 0 0;
     .content img,
     .sidebar img,
-    iframe {
+    iframe,
+    .offer img {
     padding: 10px;
     border: 1px solid #C2C2C2;
     transition: 0.18s;
@@ -718,12 +719,20 @@ a.btn, a.btn:visited, input[type=submit] {
     .slides {
         padding: 10px;
         border: 1px solid #C2C2C2;
-        margin-bottom: 40px;
     }
     .flex-control-thumbs li {
         @include gallery ( 1 of 10 );
     }
+    .flex-control-thumbs img {
+    padding: 3px;
+    border: 1px solid #C2C2C2;
+    transition: 0.18s;
+    margin: 0px 0 20px 0;
+    }
 }
+/*  */
+/* OFFERS */
+/*  */
 .offers {
     ul {
         @include full;
