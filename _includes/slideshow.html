@@ -2,7 +2,7 @@
           <ul class="slides">
               {% for image in site.data.slideshow %} 
                 <li>
-                    <img src="{{ image.src | prepend: 'assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
+                    <img src="{{ image.src | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
                     <div class="slide-info">
                         <h2 class="slide-title">{{ image.title }}</h2>
                         <p>{{ image.subtitle }}</p>

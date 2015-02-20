@@ -14,8 +14,8 @@ layout: default
      <div class="flexslider-rooms">
           <ul class="slides">
               {% for image in page.images %} 
-            <li data-thumb="{{ image.image | prepend: '/assets/thumbnails/'  | prepend: site.baseurl | prepend: site.url }}" >
-                <img src="{{ image.image | prepend: '/assets/wide/' }}" alt="">
+            <li data-thumb="{{ image.image | prepend: '/assets/thumbnails/'  | prepend: site.baseurl }}" >
+                <img src="{{ image.image | prepend: '/assets/wide/' | prepend: site.baseurl }}" alt="">
                 
 <!--                 <div class="slide-info">
                     <h2 class="slide-title">{{ image.title }}</h2>

@@ -3,7 +3,7 @@
         {% assign rooms = site.rooms | sort: 'order' %}        
         {% for room in rooms  %}
             <li>
-                <a href="{{ room.url }}">{{ room.title }}</a>
+                <a href="{{ room.url | prepend: site.baseurl }}">{{ room.title }}</a>
             </li>
         {% endfor %}
     </ul>
