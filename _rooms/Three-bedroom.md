@@ -2,7 +2,12 @@
 layout: room
 title: Three Bedroom
 categories: rooms
-image: http://www.cssigniter.com/themeforest/santorini/demo/long1.jpg
+image: triklino_1.jpg
+images:
+  - image: triklino_1.jpg
+  - image: triklino_2.jpg
+  - image: triklino_3.jpg
+  - image: triklino_4.jpg
 section: threebedroom
 published: true
 order: 3

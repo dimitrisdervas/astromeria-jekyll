@@ -1,14 +1,19 @@
-- src: "slider_0.jpg"
+- src: "slider_1_1.jpg"
   alt: ""
   title: 'Be treated like a king'
   subtitle: 'from 35€/night'
   
-- src: "slider_1.jpg"
+- src: "slider_2_1.jpg"
   alt: ""
   title: 'Live your myth in Greece'
   subtitle: 'from 25€/night'
   
-- src: "slider_2.jpg"
+- src: "slider_3.jpg"
+  alt: ""
+  title: 'Be treated like a king'
+  subtitle: 'from 25€/night'
+
+- src: "slider_4_1.jpg"
   alt: ""
   title: 'Be treated like a king'
   subtitle: 'from 25€/night'

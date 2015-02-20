@@ -4,7 +4,15 @@ title: Two Bedroom
 categories: rooms
 section: twobedroom
 published: true
-image: http://www.cssigniter.com/themeforest/santorini/demo/long1.jpg
+image: diklino_1.jpg
+images:
+  - image: diklino_1.jpg
+  - image: diklino_2.jpg
+  - image: diklino_3.jpg
+  - image: diklino_4.jpg
+  - image: diklino_5.jpg
+  - image: diklino_6.jpg
+  - image: diklino_7.jpg
 order: 2
 low: 70€
 medium: 80€

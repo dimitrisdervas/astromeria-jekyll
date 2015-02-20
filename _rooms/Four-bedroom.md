@@ -2,7 +2,12 @@
 layout: room
 title: Four Bedroom
 categories: rooms
-image: http://www.cssigniter.com/themeforest/santorini/demo/long1.jpg
+image: tetraklino_2.jpg
+images:
+  - image: tetraklino_1.jpg
+  - image: tetraklino_2.jpg
+  - image: tetraklino_3.jpg
+  - image: tetraklino_4.jpg
 section: fourbedroom
 published: true
 order: 4

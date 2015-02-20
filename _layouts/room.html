@@ -5,22 +5,22 @@ layout: default
 
 
 <div class="main">
-    
+ <div class="main-wrapper">   
 <h2 class="page-title">{{ page.title }}</h2>
     
    {% include reviews.html %}
     
     
-     <div class="flexslider room-slideshow">
+     <div class="flexslider-rooms">
           <ul class="slides">
-              {% for image in site.data.slideshow %} 
-            <li>
-                <img src="{{ image.src | prepend: '/assets/' }}" alt="">
+              {% for image in page.images %} 
+            <li data-thumb="{{ image.image | prepend: '/assets/thumbnails/'  | prepend: site.baseurl | prepend: site.url }}" >
+                <img src="{{ image.image | prepend: '/assets/wide/' }}" alt="">
                 
-                <div class="slide-info">
+<!--                 <div class="slide-info">
                     <h2 class="slide-title">{{ image.title }}</h2>
                     <p>{{ image.subtitle }}</p>
-                </div>
+                </div> -->
               </li>
               {% endfor %}
   	    	</ul>
@@ -76,6 +76,8 @@ layout: default
      
  {% include sidebar.html %}
     </div>
+    </div>
 <div class="reservation-bottom">
 {% include reservation.html %}
-    </div>
+    
+</div>

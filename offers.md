@@ -2,9 +2,10 @@
 layout: default
 ---
 
-<h2 class="page-title">Offers</h2>
-<div class="main">
 
+
+<div class="main">
+    <h2 class="page-title">Offers</h2>
  <div class="offers-menu">
             <ul>
                 {% assign rooms = site.rooms | sort: 'order' %}        
@@ -29,8 +30,10 @@ layout: default
                                         <h2><span>only</span>{{ room.2nights-offer }}</h2>
                                     </li >
                                     <li class="item">
+                                    <a href="/booking">
                                          <h4>3 nights - {{ room.3nights-sale }}</h4>
                                         <h2><span>only</span>{{ room.3nights-offer }}</h2>
+                                     </a>
                                     </li>
                                     <li class="item" >
                                          <h4>5 nights - {{ room.5nights-sale }}</h4>

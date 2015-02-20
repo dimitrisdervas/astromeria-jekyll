@@ -1,13 +1,13 @@
 .menu-inside {
         @include container;
         .menu-left {
-            @include span(5 of 12);        
+            @include span(5 of 15);        
         }
         .logo {
-            @include span(2 at 5  of 12);
+            @include span(5 at 5 of 15);
         }
         .menu-right {
-            @include span(5 at 7 of 12 last);
+            @include span(5 at 10 of 15 last);
         }
         
     }
@@ -19,6 +19,9 @@
 }
 .content {
     @include span(10 of 16);
+}
+.main-wrapper {
+    @include container(65em);
 }
 .sidebar {
     @include span(5 of 16 last);
@@ -37,7 +40,7 @@
     @include container;
     margin-bottom: 2em;
     .item {
-    @include gallery(4 of 20);
+    @include gallery(4 of 12);
     }
 }
 
