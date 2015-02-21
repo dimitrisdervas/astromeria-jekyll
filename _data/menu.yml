@@ -1,17 +1,17 @@
 - title: Rooms
-  href: "rooms"
+  href: "/rooms"
   
 - title: Booking
-  href: "booking"
+  href: "/booking"
   
 - title: Blog
-  href: "blog"
+  href: "/blog"
 
 - title: Offers
-  href: "offers"
+  href: "/offers"
 
 - title: Contact
-  href: "contact"
+  href: "/contact"
   
 - title: Reviews
   href: "/"

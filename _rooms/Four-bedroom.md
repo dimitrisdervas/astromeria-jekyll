@@ -11,9 +11,9 @@ images:
 section: fourbedroom
 published: true
 order: 4
-low: 45€
+low: 50€
 medium: 50€
-high: 65€
+high: 70€
 2nights-offer: 80€
 3nights-offer: 100€
 5nights-offer: 150€

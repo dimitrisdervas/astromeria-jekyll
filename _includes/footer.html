@@ -15,7 +15,7 @@
             <div class="navigation menu-right">
             <ul>
               {% for menu in site.data.menu limit:3 offset: 3 %} 
-                <li><a  href="/{{ menu.href | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
+                <li><a  href="{{ menu.href | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
                {% endfor %}
             </ul>
             </div>
@@ -23,9 +23,3 @@
 </footer>
          <!-- Js all-->
          <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 
-<script>
-$(".dk").dropkick({
-		theme: 'ci'
-	});
-
-</script>
