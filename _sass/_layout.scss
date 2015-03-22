@@ -1,16 +1,19 @@
-.menu-inside {
+.lang-switcher {
         @include container;
-        .menu-left {
-            @include span(5 of 15);        
+}
+.menu-inside{
+        @include container;
+        .menu-left ul{
+            @include span(6 of 15);        
         }
         .logo {
-            @include span(4 at 5 of 15);
+            @include span(3 at 5 of 15);
             img {
-            @include span(9 of 12);
+            @include span(12 of 12);
             }
         }
         .menu-right {
-            @include span(5 at 8 of 15);
+            @include span(6 at 9 last of 15);
         }
         
     }
@@ -21,7 +24,7 @@
     @include container;
 }
 .content {
-    @include span(10 of 16);
+    @include container;
 }
 .main-wrapper {
     @include container(65em);
@@ -31,6 +34,15 @@
 }
 .booking-wrap {
     @include full;
+}
+.info {
+    @include container;
+    .info-left {
+        @include span ( 6 of 12 no-gutters)
+    }
+    .info-right {
+         @include span ( 6 of 12 no-gutters)
+    }
 }
 .booking {
     @include container;
@@ -43,7 +55,7 @@
     @include container;
     margin-bottom: 2em;
     .item {
-    @include gallery(4 of 12);
+    @include gallery(3 of 12);
     }
 }
 

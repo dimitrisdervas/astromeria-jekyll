@@ -1,19 +1,41 @@
-- src: "slider_1_1.jpg"
-  alt: ""
-  title: 'Be treated like a king'
-  subtitle: 'from 35€/night'
+en:
+ - src: "slider_1_1.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 35€/night'
   
-- src: "slider_2_1.jpg"
-  alt: ""
-  title: 'Live your myth in Greece'
-  subtitle: 'from 25€/night'
+ - src: "slider_2_1.jpg"
+   alt: ""
+   title: 'Live your myth in Greece'
+   subtitle: 'from 25€/night'
   
-- src: "slider_3.jpg"
-  alt: ""
-  title: 'Be treated like a king'
-  subtitle: 'from 25€/night'
+ - src: "slider_3.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 25€/night'
 
-- src: "slider_4_1.jpg"
-  alt: ""
-  title: 'Be treated like a king'
-  subtitle: 'from 25€/night'
+ - src: "slider_4_1.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 25€/night'
+   
+gr:
+ - src: "slider_1_1.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 35€/night'
+  
+ - src: "slider_2_1.jpg"
+   alt: ""
+   title: 'Live your myth in Greece'
+   subtitle: 'from 25€/night'
+  
+ - src: "slider_3.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 25€/night'
+
+ - src: "slider_4_1.jpg"
+   alt: ""
+   title: 'Be treated like a king'
+   subtitle: 'from 25€/night'

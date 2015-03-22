@@ -1,6 +1,6 @@
 <div class="rooms-menu">
     <ul>
-        {% assign rooms = site.rooms | sort: 'order' %}        
+       {% assign rooms = site.rooms | where:'lang', page.lang %}
         {% for room in rooms  %}
             <li>
                 <a href="{{ room.url | prepend: site.baseurl }}">{{ room.title }}</a>

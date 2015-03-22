@@ -1,6 +1,6 @@
  <section id="slider" class="flexslider">
           <ul class="slides">
-              {% for image in site.data.slideshow %} 
+              {% for image in site.data.slideshow.[page.lang] %} 
                 <li>
                     <img src="{{ image.src | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
                     <div class="slide-info">

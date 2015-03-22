@@ -1,5 +1,6 @@
 <section class="frontpage-gallery gallery" >
-    {% for room in site.rooms %}
+{% assign rooms = site.rooms | where:'lang', page.lang %}
+    {% for room in rooms %}
             <div class="item">
                 <div class="item-thumb">
                     <a href="{{ room.url | prepend: site.baseurl }}">

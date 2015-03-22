@@ -1,15 +1,22 @@
-- title: low
-  low: 20 April - 19 July
-  low: 1 Sep - 14 Oct
-    
-- title: medium
-  medium: 15 Oct - 18 Dec
-  medium: 16 Jan - 5 April
-    
-- title: high
-  high: 19 Dec - 15 Jan
-  high: 20 July -30 Aug
-  high: 6 April - 19 April
-
-
+seasons:
+ en:
+    low:
+     name: Low Season
+     date: 20 April - 19 July
+    medium:
+     name: Medium Season
+     date: 20 April - 19 July
+    high:
+     name: Hight Season
+     date: 19 Dec - 15 Jan
+ gr:
+   low:
+     name: Χαμηλή
+     date: 20 April - 19 July
+   medium:
+     name: Μεσαία
+     date: 20 April - 19 July
+   high:
+     name: Υψηλή
+     date: 19 Dec - 15 Jan
 

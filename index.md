@@ -1,9 +1,9 @@
 ---
 layout: frontpage
+lang: en
 ---
 
- {% include slideshow.html %}  
- {% include reservation.html %}
+ {% include slideshow.html %}
 <div class="main">
     {% include reviews.html %}
     {% include frontpage-gallery.html %}

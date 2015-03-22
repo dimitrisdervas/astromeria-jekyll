@@ -1,2 +1,65 @@
-- message: Our wedding suite. 50% off. May 5th.
-  image: pelion-offer.jpg
+offer:
+  twobedroom:
+     - name: 
+        en: 2night
+        gr: 2 νύχτες
+       price: 35
+     - name: 
+        en: 3 night
+        gr: 3 νύχτες
+       price: 40
+     - name: 
+        en: 5 night
+        gr: 5 νύχτες
+       price: 100      
+  threebedroom:
+     - name: 
+        en: 2night
+        gr: 2 νύχτες
+       price: 35
+     - name: 
+        en: 3 night
+        gr: 3 νύχτες
+       price: 40
+     - name: 
+        en: 5 night
+        gr: 5 νύχτες
+       price: 100 
+  fourbedroom:
+     - name: 
+        en: 2night
+        gr: 2 νύχτες
+       price: 35
+     - name: 
+        en: 3 night
+        gr: 3 νύχτες
+       price: 40
+     - name: 
+        en: 5 night
+        gr: 5 νύχτες
+       price: 100    
+  tworoom:
+     - name: 
+        en: 2night
+        gr: 2 νύχτες
+       price: 35
+     - name: 
+        en: 3 night
+        gr: 3 νύχτες
+       price: 40
+     - name: 
+        en: 5 night
+        gr: 5 νύχτες
+       price: 100
+  valid:
+     en: "*Prices Valid till 27 Sept '14, Breakfast not included"
+     gr: "*Οι τιμές ισχύουν εως 27 Σεπτεμβρίου '14"
+  strings:
+    en:
+      2night: 2 nights
+      3night: 3 nights
+      4night: 4 nights 
+    gr: 
+      2night: 2 νύχτες
+      3night: 3 νύχτες
+      4night: 4 νύχτες  

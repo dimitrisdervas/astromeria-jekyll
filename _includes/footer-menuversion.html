@@ -1,0 +1,25 @@
+<footer class="site-footer">
+
+    <div class="menu-inside">
+      <hr>
+         <div class="navigation menu-left">
+            <ul>              
+                 {% for menu in site.data.menu.[page.lang]  limit:3 %}
+                    <li><a  href="{{ menu.url | prepend: site.baseurl }}" >{{ menu.name }}</a></li>
+                   {% endfor %}
+            </ul>
+            </div>
+            <div class="logo">
+            <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/assets/logo_grey.png" alt=""></a>
+                </div>
+            <div class="navigation menu-right">
+            <ul>
+              {% for menu in  site.data.menu.[page.lang]  limit:3 offset: 3 %} 
+                <li><a  href="{{ menu.url | prepend: site.baseurl }}" >{{ menu.name }}</a></li>
+               {% endfor %}
+            </ul>
+            </div>
+        </div>
+</footer>
+         <!-- Js all-->
+         <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 

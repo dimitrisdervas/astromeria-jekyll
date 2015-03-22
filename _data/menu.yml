@@ -1,17 +1,26 @@
-- title: Rooms
-  href: "/rooms"
-  
-- title: Booking
-  href: "/booking"
-  
-- title: Blog
-  href: "/blog"
-
-- title: Offers
-  href: "/offers"
-
-- title: Contact
-  href: "/contact"
-  
-- title: Reviews
-  href: "/"
+en:
+    - name: "Accomodation"
+      url: "/rooms"
+    - name: "Booking"
+      url: "/booking"
+    - name: "Special offers"
+      url: "/offers"
+    - name: "Facilities"
+      url: "/ammenities"
+    - name: "Activities"
+      url: "/activities"
+    - name: "Client comments"
+      url: "/reviews/"
+gr:
+    - name: "Διαμονή"
+      url: "/rooms"
+    - name: "Κρατήσεις"
+      url: "/booking"
+    - name: "Ειδικές προσφορές"
+      url: "/offers"
+    - name: "Παροχές"
+      url: "/ammenities"
+    - name: "Δραστηριότητες"
+      url: "/activities"
+    - name: "Σχόλια Πελατών"
+      url: "/reviews/"

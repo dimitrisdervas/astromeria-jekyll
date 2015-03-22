@@ -6,8 +6,6 @@
 @import "include-css.css";
 @import "layout";
 @import "sidebar";
-/* Bootstrap buttons */
-
 
 /* Compass mixins */
     
@@ -50,6 +48,12 @@
 /* -----------------------------------------
 	General
 ----------------------------------------- */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+    
 h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   margin: 0 0 15px 0;
@@ -113,21 +117,26 @@ ul {
 .frontpage header {
     position: relative;
     z-index: 10;
-    height: 230px;    
+    height: 100px;    
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    color: #FFF;
-    background: none;
-    padding:0;
-    
+    color: #FFF;    
 }
 header {
-   background: url("http://www.cssigniter.com/preview/santorini/files/2014/03/header_image.jpg") no-repeat center top;
-   padding: 2em 0 5em;
+   background: #848484;
+    .logo {
+      background: #848484;
+    }
     li {
             @include inline-list;
         }
 }
+.lang-switcher {
+  text-align: right;
+}
+/*  */
+/* Footer */
+/*  */
 footer {
     position: relative;
     z-index: 10;
@@ -140,72 +149,11 @@ footer {
             @include inline-list;
         }
 }
-/*  */
-/* General Form Styling
-=================================== */
-label {
-  display: block;
-  font-size: 90%;
-  margin-bottom: 2px; }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea {
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border-radius: 0;
-  box-shadow: none;
-  width: auto;
-  padding: 12px 18px;
-  height: auto;
-  border: 2px solid #C2C2C2;
-  line-height: normal;
-  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
-  min-width: 80%;
-  color: #6d6e71;
-  background: transparent; }
-
-textarea {
-  width: 100%;
-  height: auto; }
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-  background: transparent;
-  outline: none; }
-
-fieldset {
-  padding: 15px 15px 0 15px; }
-
-fieldset legend {
-  font-weight: bold;
-  padding: 0 3px;
-  margin: 0;
-  margin-left: -3px; }
-
-input.highlight {
-  border-color: #ff4a4a; }
 
 /* Navigation */
 .navigation {
+    
     a {
         text-transform: uppercase;
         margin: 5px 0em 5px 0em;
@@ -218,10 +166,13 @@ input.highlight {
     a:hover {
         border-bottom: 1px solid #FFF; 
     }
-    li {
-        @include inline-list;
-        @include gallery ( 4 of 12);
-        text-align: center;
+    ul {
+        padding: 0;
+        li {
+            @include inline-list;
+            @include gallery ( 4 of 12);
+            text-align: center;
+        }
     }
 }
 header .navigation {
@@ -235,10 +186,10 @@ footer .navigation {
     }
 }
 header hr {
-background: none;
-border: none;
-margin: 10px 0 0 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    border: none;
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 footer hr {
 margin-bottom: 40px;
@@ -251,10 +202,8 @@ border-top: 1px solid #eeeeee;
 }
 /* Slideshow */
 #slider {
-    margin: 0 0 -230px 0;
     color: #FFF;
-    position: relative;
-    top: -231px;
+    top: -40px;
 }
 .flexslider {
     margin: 0;
@@ -567,12 +516,20 @@ right: 10px;
     margin-right: 10px; 
   }
 
-
+/*  */
+/* Frontpage INFO */
+/*  */
+.info-list {
+    margin-bottom: 2em;
+    float: left;
+        .info-left {
+          padding 1.5em;
+        }
+}
 /*  */
 /* Blockquote */
 /*  */
 .reviews {
-
     blockquote {
       text-align: center;
       margin: 0;
@@ -737,26 +694,27 @@ a.btn, a.btn:visited, input[type=submit] {
     ul {
         @include full;
         padding: 0;
-        .item  {
-        @include gallery (4 of 12);
+        text-align: center;
+        .offer  {
+            @include gallery (4 of 12);
             border: 1px solid #C2C2C2;
             margin: 0px 0 20px 0;
             background: #fcfcfc;
-            h4 {
-                font-size: 2em;
-                padding: 15px 0 0 0;
+                h4 {
+                    font-size: 2em;
+                    padding: 15px 0 0 0;
+                }
+                h2 {
+                    font-size: 3em;
+                    color: #D33E93 ;
+                }
+                span {
+                    padding-right: 0.3em;
+                    font-size: 18px;
+                    color: #6c6c6c;
+                    padding-right: 0.3em;
+                }
             }
-            h2 {
-                font-size: 3em;
-                color: #D33E93 ;
-            }
-            span {
-                padding-right: 0.3em;
-                font-size: 18px;
-                color: #6c6c6c;
-                padding-right: 0.3em;
-            }
-    }
     }
 }
 .normal-prices {
@@ -770,20 +728,24 @@ a.btn, a.btn:visited, input[type=submit] {
             border: 1px solid #C2C2C2; 
             color:#fff;
             padding: 1em 0 0 0;
-            h4 {
-                padding: 0;
-                margin-bottom: 1em;
-            }
-            h3 {
-               margin: 0;
-                padding: 0;
-            }
-            h2 {
-                color: #4280A6 ;                           
+        &.price  {   
+               h4 {
+                   padding: 0;
+                   margin-bottom: 1em;
+               }
+               h3 {
+                    margin: 0;
+                    padding: 0;
+               }
+               h2 {
+                    color: #4280A6;                           
+               } 
+           }
+        
         }
     }
 }
-}
+
 .reservation-bottom .booking-wrap {
     background: url('http://www.cssigniter.com/preview/santorini/files/2014/03/booking_bg.jpg') no-repeat center center;
     margin: 50px 0;
@@ -806,3 +768,67 @@ padding: 55px 0 50px;
 .offer-item{
     @include gallery ( 2 of 4 );
 }
+
+/*  */
+/* General Form Styling
+=================================== */
+label {
+  display: block;
+  font-size: 90%;
+  margin-bottom: 2px; }
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 0;
+  box-shadow: none;
+  width: auto;
+  padding: 12px 18px;
+  height: auto;
+  border: 2px solid #C2C2C2;
+  line-height: normal;
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  min-width: 80%;
+  color: #6d6e71;
+  background: transparent; }
+
+textarea {
+  width: 100%;
+  height: auto; }
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  background: transparent;
+  outline: none; }
+
+fieldset {
+  padding: 15px 15px 0 15px; }
+
+fieldset legend {
+  font-weight: bold;
+  padding: 0 3px;
+  margin: 0;
+  margin-left: -3px; }
+
+input.highlight {
+  border-color: #ff4a4a; }

@@ -31,53 +31,35 @@ layout: default
         
        {{ page.content }} 
         <div class="offers">
-            <h3>offers</h3>
+            <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
             <ul>
-                    <li class="item">
-                        <h4>2 nights - {{ page.2nights-sale }}</h4>
-                        <h2><span>only</span>{{ page.2nights-offer }}</h2>
-                    </li >
-                    <li class="item">
-                         <h4>3 nights - {{ page.3nights-sale }}</h4>
-                        <h2><span>only</span>{{ page.3nights-offer }}</h2>
-                    </li>
-                    <li class="item" >
-                         <h4>5 nights - {{ page.5nights-sale }}</h4>
-                        <h2><span>only</span>{{ page.5nights-offer }}</h2>
-                    </li>
-                
+                 {% for offer in site.data.offer.offer.[page.section] %}
+                        <li class="offer">              
+                            <h4>{{ offer.name.[page.lang] }}</h4>
+                            <h2>{{ offer.price }}/night</h2>
+                        </li>                                           
+                    {% endfor %} 
                 </ul>
-            <p>*Prices Valid till 27 Sept '14, Breakfast not included</p>
-        </div>
-            <h3>prices</h3>
-            <div class="normal-prices">
-            <ul>
-                <li>
-                    <h3>Low Season</h3>
-                    <h4>12/2-13/6</h4>
-                    <h2>{{ page.low }}/night</h2>
-                </li>
-                <li>
-                    <h3>Medium Season</h3>
-                    <h4>12/2-13/6</h4>
-                    <h2>{{ page.medium }}/night</h2>
-                </li>
-                <li>
-                    <h3>High Season</h3>
-                    <h4>12/2-13/6</h4>
-                    <h2>{{ page.high }}/night</h2>
-                </li>
-            </ul>
-                <p>*Prices Valid till 27 Sept '14, Breakfast not included</p>
-            
-            </div>
+            <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
         </div>
         
-     
- {% include sidebar.html %}
+            <h3>{{ site.data.strings.strings.[page.lang].prices }}</h3>
+           <div class="normal-prices">        
+                    <ul>
+                        
+                        {% for i in (1..num) %}
+                            {% capture season %}{% cycle 'low', 'medium', 'high' %}{% endcapture %}
+                            <li class="price">              
+                                <h3>{{ site.data.prices.seasons.[page.lang].[season].name }}</h3>
+                                <h4>{{ site.data.prices.seasons.[page.lang].[season].date }}</h4>
+                                <h2>{{ page.[season] }}/night</h2>
+                            </li>                                           
+                        {% endfor %} 
+                       
+                    </ul>
+                    <p> {{ site.data.prices.seasons.[page.lang].valid }} </p>
+
+            </div>
+        </div>     
     </div>
     </div>
-<div class="reservation-bottom">
-{% include reservation.html %}
-    
-</div>

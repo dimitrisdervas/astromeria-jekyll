@@ -1,11 +1,22 @@
 <header>
+    <div class="lang-switcher">
+             Curent lang:{{ page.lang }}
+         {% for lang in site.data.languages %} 
+
+            {% if page.lang == lang.url %}        
+                <a href="{{ site.baseurl }}">{{ lang.language }}</a>
+            {% else %}
+              <a href='/{{ lang.url }}'>{{ lang.language }}</a>
+            {% endif %}
+        {% endfor %}
+        </div>    
   <div class="menu-inside">
       <hr>
         <div class="navigation menu-left">
-            <ul>
-              {% for menu in site.data.menu limit:3 %} 
-                <li><a  href="{{ menu.href  | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
-               {% endfor %}
+            <ul>              
+                 {% for menu in site.data.menu.[page.lang]  limit:3 %}
+                    <li><a  href="{{ menu.url | prepend: site.baseurl | prepend: page.lang }}" >{{ menu.name }}</a></li>
+                   {% endfor %}
             </ul>
             </div>
             <div class="logo">
@@ -13,8 +24,8 @@
                 </div>
             <div class="navigation menu-right">
             <ul>
-              {% for menu in site.data.menu limit:3 offset: 3 %} 
-                <li><a  href="{{ menu.href | prepend: site.baseurl }}" >{{ menu.title }}</a></li>
+              {% for menu in  site.data.menu.[page.lang]  limit:3 offset: 3 %} 
+                <li><a  href="{{ menu.url | prepend: site.baseurl }}" >{{ menu.name }}</a></li>
                {% endfor %}
             </ul>
             </div>
