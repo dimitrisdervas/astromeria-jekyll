@@ -1,0 +1,18 @@
+ low: 
+   en: Low Season
+   gr: Χαμηλή
+   date: 
+    en: 20 April - 19 July
+    gr: 20 Μαρτιο - 19 Απριλιοσ
+ medium:
+   en: Medium Season
+   gr: Μεσαία
+   date:
+    en: 20 April - 19 July
+    gr: 20 σεπτ - 19 οκτ
+ high:
+   en: High Season
+   gr: Υψηλη
+   date:
+    en: 20 April - 19 July
+    gr: 20 ιουνιος - 19 Ιουλίου

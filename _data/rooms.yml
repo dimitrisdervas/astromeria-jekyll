@@ -1,0 +1,24 @@
+rooms:
+  threebedroom:
+     prices: 
+      - season: low
+        price: 45€
+      - season: medium
+        price: 75€
+      - season: high
+        price: 85€
+     offers: 
+      - season: low
+        price: 45€
+        nights: 5
+      - season: medium
+        price: 75€
+        nights: 5
+      - season: high
+        price: 85€
+        nights: 5
+     images:
+      - image: triklino_1.jpg
+      - image: triklino_2.jpg
+      - image: triklino_3.jpg
+      - image: triklino_4.jpg

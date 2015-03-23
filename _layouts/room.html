@@ -11,7 +11,7 @@ layout: default
         
         <div class="flexslider-rooms">
               <ul class="slides">
-                  {% for image in page.images %} 
+                  {% for image in site.data.rooms.rooms.[page.section].images %} 
                 <li data-thumb="{{ image.image | prepend: '/assets/thumbnails/'  | prepend: site.baseurl }}" >
                     <img src="{{ image.image | prepend: '/assets/wide/' | prepend: site.baseurl }}" alt="">
                   </li>
@@ -23,36 +23,38 @@ layout: default
         <div class="content">
             
            {{ page.content }} 
-            
-            <div class="offers">
-                    <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
-                    <ul>
-                         {% for offer in page.offers %}
-                                <li class="offer">              
-                                    <h4>{{ offer.season.[page.lang] }}</h4>
-                                    <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
-                                    <h2>{{ offer.price }} </h2>
-                                </li>                                           
-                            {% endfor %} 
-                        </ul>
-                     <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
-                </div>
-               
-               <div class="normal-prices">        
+           
+                     <div class="normal-prices">        
                        <h3>{{ site.data.strings.strings.[page.lang].prices }}</h3>
                         <ul>
-                            {% for price in page.prices %}
+                            {% for price in site.data.rooms.rooms.[page.section].prices %}
                                 <li class="price">              
-                                    <h3> {{ price.season.[page.lang] }}</h3>
-                                    <h4> {{ price.date.[page.lang] }}</h4>
+                                    <h3> {{ site.data.season.[price.season].[page.lang] }}</h3>
+                                    <h4> {{ site.data.season.[price.season].date.[page.lang] }}</h4>
                                     <h2> {{ price.price }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
                                 </li>                                           
                             {% endfor %} 
                         </ul>
                         <p> {{ site.data.prices.seasons.[page.lang].valid }} </p>
                     </div>
-            </div>   
-        
+           
+                    <div class="offers">
+                       <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
+                       <ul>
+                            {% for offer in  site.data.rooms.rooms.[page.section].offers %}
+                                   <li class="offer">              
+                                       <h4>{{ site.data.season.[offer.season].[page.lang] }}</h4>
+                                       <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
+                                       <h2>{{ offer.price }} </h2>
+                                   </li>                                           
+                               {% endfor %} 
+                           </ul>
+                        <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
+                   </div>
+           
+           
+
+      </div>
         {% include reviews.html %}
         
     </div>
