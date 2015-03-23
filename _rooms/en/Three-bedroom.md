@@ -21,16 +21,16 @@ prices:
     en: 20 April - 19 July
     gr: 20 Απριλίου - 19 Ιουλίου
  - season:
-    en: Low Season
-    gr: Χαμηλή
-   price: 45€
+    en: Medium Season
+    gr: Μεσαία
+   price: 75€
    date:
     en: 20 April - 19 July
     gr: 20 Απριλίου - 19 Ιουλίου
  - season:
-    en: Low Season
-    gr: Χαμηλή
-   price: 45€
+    en: High Season
+    gr: Υψηλη
+   price: 85€
    date:
     en: 20 April - 19 July
     gr: 20 Απριλίου - 19 Ιουλίου
@@ -41,14 +41,14 @@ offers:
    price: 45€
    nights: 5
  - season:
-    en: Low Season
-    gr: Χαμηλή
-   price: 45€
+    en: Medium Season
+    gr: Μεσαία
+   price: 75€
    nights: 5
  - season:
-    en: Low Season
-    gr: Χαμηλή
-   price: 45€
+    en: High Season
+    gr: Υψηλη
+   price: 85€
    nights: 5
 ---
 

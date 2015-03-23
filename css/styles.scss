@@ -128,7 +128,7 @@ header {
       background: #848484;
     }
     li {
-            @include inline-list;
+         @include inline-list;
         }
 }
 .lang-switcher {
@@ -137,23 +137,22 @@ header {
 /*  */
 /* Footer */
 /*  */
-footer {
-    position: relative;
-    z-index: 10;
-    height: 230px;    
-    font-family: Montserrat, sans-serif;
-    font-weight: 400;
-    color: #b4b4b4;
-    background: none;
-    li {
-            @include inline-list;
-        }
+.footer {
+    .footer-item {
+         @include gallery ( 4 of 12);
+    }
+    .social ul {
+        @include inline-list;
+       
+    }
+   .booking {
+      background: #003580;
+   }
 }
 
 
 /* Navigation */
 .navigation {
-    
     a {
         text-transform: uppercase;
         margin: 5px 0em 5px 0em;
@@ -180,19 +179,12 @@ header .navigation {
         color: #ffffff;
     }
 }
-footer .navigation {
-    a {
-        color: #b4b4b4;
-    }
-}
+
 header hr {
     background: none;
     border: none;
     margin: 10px 0 0 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-footer hr {
-margin-bottom: 40px;
 }
 hr {
 margin-top: 20px;
@@ -523,7 +515,6 @@ right: 10px;
     margin-bottom: 2em;
     float: left;
         .info-left {
-          padding 1.5em;
         }
 }
 /*  */

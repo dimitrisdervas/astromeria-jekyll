@@ -2,6 +2,8 @@ strings:
    en:
      offers: offers
      prices: prices
+     nights: nights
    gr:
      offers: προσφορές
      prices: τιμές
+     nights: νύχτες

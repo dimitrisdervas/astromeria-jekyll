@@ -12,13 +12,46 @@ images:
 section: threebedroom
 published: true
 order: 3
-low: 45€
-medium: 50€
-high: 65€
-2nights-offer: 80€
-3nights-offer: 100€
-5nights-offer: 150€
+prices: 
+ - season:
+    en: Low Season
+    gr: Χαμηλή
+   price: 45€
+   date:
+    en: 20 April - 19 July
+    gr: 20 Απριλίου - 19 Ιουλίου
+ - season:
+    en: Medium Season
+    gr: Μεσαία
+   price: 75€
+   date:
+    en: 20 April - 19 July
+    gr: 20 Απριλίου - 19 Ιουλίου
+ - season:
+    en: High Season
+    gr: Υψηλη
+   price: 85€
+   date:
+    en: 20 April - 19 July
+    gr: 20 Απριλίου - 19 Ιουλίου
+offers: 
+ - season:
+    en: Low Season
+    gr: Χαμηλή
+   price: 45€
+   nights: 5
+ - season:
+    en: Medium Season
+    gr: Μεσαία
+   price: 75€
+   nights: 5
+ - season:
+    en: High Season
+    gr: Υψηλη
+   price: 85€
+   nights: 5
 ---
+Ellinika
 
 One bedroom Apartments are suitable for 2 or 3 persons. 
 There are 2 small apartments offering a living room with kitchen and refrigerator, a bedroom, with double or two single beds and bath. 

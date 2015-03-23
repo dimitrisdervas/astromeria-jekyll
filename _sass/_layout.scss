@@ -1,8 +1,24 @@
-.lang-switcher {
-        @include container;
+@import "susy-config";
+@import "sass-components";
+
+header,
+footer
+#slider {
+    @include full;
 }
-.menu-inside{
-        @include container;
+
+.main,
+.content, 
+.booking,
+.reviews,
+.frontpage-gallery,
+.lang-switcher,
+.menu-inside,
+.footer-wrapper {
+    @include container;
+}
+
+.menu-inside {
         .menu-left ul{
             @include span(6 of 15);        
         }
@@ -17,15 +33,7 @@
         }
         
     }
-#slider {
-    @include full;
-}
-.main {
-    @include container;
-}
-.content {
-    @include container;
-}
+
 .main-wrapper {
     @include container(65em);
 }
@@ -35,6 +43,7 @@
 .booking-wrap {
     @include full;
 }
+/* Frontpage */
 .info {
     @include container;
     .info-left {
@@ -44,15 +53,11 @@
          @include span ( 6 of 12 no-gutters)
     }
 }
-.booking {
-    @include container;
-}
+
 .reviews {
-    @include container;
     margin-bottom: 2em;
 }
 .frontpage-gallery {
-    @include container;
     margin-bottom: 2em;
     .item {
     @include gallery(3 of 12);

@@ -1,12 +1,42 @@
-<footer class="site-footer">
+<footer class="footer-wrapper footer">
+    <div class="footer-inside">
+        <div class="contact footer-item">
+            <ul>       
+                <li><p>{{ site.data.footer.contact.address.[page.lang] }}</p></li>
+                <li><p>{{ site.data.footer.contact.tel }}</p></li>
+                <li><p>{{ site.data.footer.contact.email }}</p></li>
+                </ul>
+            </div>
 
-<div class="contact item"></div>
-<div class="social item"></div>
-<div class="hotel  item"></div>
-<div class="newsletter item "></div>
-<div class="weather item "></div>
-<div class="map item"></div>
-    
+        <div class="social footer-item">
+            <ul>
+            {% for social in site.data.footer.social %}
+               <li><a href="{{ social.url }}">
+                            <i class="fa fa-{{ social.name }}"></i>
+                        </a>
+                   </li>
+             {% endfor %}
+                </ul>
+            </div>
+
+        <div class="widget  footer-item">
+            {% for widget in site.data.footer.widget %}
+
+            <div>
+            {{ widget.html.[page.lang] }}
+            </div>
+             {% endfor %}
+            </div>
+        <div class="newsletter footer-item ">
+
+            </div>
+        <div class="weather footer-item ">
+
+            </div>
+        <div class="map footer-item">
+
+            </div>
+        </div>
 </footer>
          <!-- Js all-->
          <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 
