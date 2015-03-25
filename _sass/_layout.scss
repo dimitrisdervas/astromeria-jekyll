@@ -2,8 +2,8 @@
 @import "sass-components";
 
 header,
-footer
-#slider {
+footer,
+.slider {
     @include full;
 }
 
@@ -14,7 +14,7 @@ footer
 .frontpage-gallery,
 .lang-switcher,
 .menu-inside,
-.footer-wrapper {
+.footer-inside {
     @include container;
 }
 
