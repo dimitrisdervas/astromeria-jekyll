@@ -1,5 +1,6 @@
  - language: Ελληνικά
    url: gr
- 
  - language: English
    url: en
+ - language: Deutsch
+   url: de

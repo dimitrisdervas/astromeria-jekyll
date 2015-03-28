@@ -3,21 +3,9 @@ layout: room
 lang: gr
 title: Δίχωρο
 categories: rooms
-image: tetraklino_2.jpg
-images:
-  - image: dixoro_1.jpg
-  - image: dixoro.jpg
-  - image: tetraklino_3.jpg
-  - image: tetraklino_4.jpg
-section: twobedroom
+section: tworooms
 published: true
-order: 4
-low: 50€
-medium: 50€
-high: 70€
-2nights-offer: 80€
-3nights-offer: 100€
-5nights-offer: 150€
+order: 3
 ---
 
-Ιτ ισ αλλ γρεεκ το με
+Ιδανικό δωμάτιο για οικογένεια ακόμα και για δύο ζευγάρια καθώς υπάρχει πόρτα που διαχωρίζει τα δωμάτια.Πλήρως εξοπλισμένο με κουζίνα,ψυγείο και τηλεόραση.Η μαγευτική θέα και αναζωογονητική ατμόσφαιρα του βουνού θα σας χαλαρώσουν και θα σας ξεκουράσουν.

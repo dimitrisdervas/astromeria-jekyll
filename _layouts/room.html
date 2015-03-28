@@ -29,9 +29,21 @@ layout: default
                         <ul>
                             {% for price in site.data.rooms.rooms.[page.section].prices %}
                                 <li class="price">              
+                                 <!--Season -->
                                     <h3> {{ site.data.season.[price.season].[page.lang] }}</h3>
-                                    <h4> {{ site.data.season.[price.season].date.[page.lang] }}</h4>
+<!--                                    Date -->
+                                   <h4>
+                                   {% for date in site.data.season.[price.season].date %}
+                                     <span>{{ date.[page.lang] }}</span>
+                                   {% endfor %}
+                                      </h4>
+<!--                                    Price No Fireplace  -->
                                     <h2> {{ price.price }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
+<!--                                    Fireplace -->
+                                   {% if price.fireplace != nill %}
+                                   <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
+                                    <h2> {{ price.fireplace }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
+                                   {% endif %}
                                 </li>                                           
                             {% endfor %} 
                         </ul>

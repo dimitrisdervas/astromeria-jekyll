@@ -1,9 +1,15 @@
 contact:
-  tel: 2426032085
+  tel: 
+    - number: +3024260 32085
+    - number: +306945 903837
+    - number: +306944 251176
   email: info@astromeria-hotel.gr
   address:
     en: Zagora, 37001 Magnisia Country
     gr: Ζαγορά, 37001 Μαγνησία
+mite: 
+  - number: 0726Κ133Κ0205300 
+  - number: 0726Κ113Κ03130-1
 social:
   - name: facebook
     url:

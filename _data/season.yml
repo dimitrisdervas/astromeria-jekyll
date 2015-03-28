@@ -1,18 +1,28 @@
- low: 
-   en: Low Season
-   gr: Χαμηλή
-   date: 
-    en: 20 April - 19 July
-    gr: 20 Μαρτιο - 19 Απριλιοσ
- medium:
-   en: Medium Season
-   gr: Μεσαία
-   date:
-    en: 20 April - 19 July
-    gr: 20 σεπτ - 19 οκτ
- high:
-   en: High Season
-   gr: Υψηλη
-   date:
-    en: 20 April - 19 July
-    gr: 20 ιουνιος - 19 Ιουλίου
+low: 
+  en: Low Season
+  gr: Χαμηλή
+  dates:
+   - date: 20/4-19/7
+   - date: 1/9-14/10
+medium:
+  en: Medium Season
+  gr: Μεσαία
+  dates:
+   - date: 15/10-18/12
+   - date: 16/1-5/4
+high:
+  en: High Season
+  gr: Υψηλη
+  dates:
+   - date: 19/12-15/1
+   - date: 20/7-30/8
+   - date: 6/4-19/4
+valid: 
+   en:
+   gr: "*Οι τιμές ισχύουν εως 27 Σεπτεμβρίου '14"
+include: 
+   en:
+   gr: "*Οι τιμές συμπεριλαμβάνουν πρωινό."
+exclude: 
+   en:
+   gr: "*Οι τιμές που ισχύουν σε περιόδους Πάσχα και Αποκριών είναι ίδιες με τις τιμές στην υψηλή περίοδο."

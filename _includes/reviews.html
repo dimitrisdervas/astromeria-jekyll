@@ -2,8 +2,8 @@
             <div class="reviews-inside">   
                 <blockquote>
 				<i class="fa fa-quote-left"></i>	
-               {% for review in site.data.reviews.reviews.[page.lang] | limit: 1 | random %}                            
-                    <p>"{{ review.review }}"</p>
+               {% for review in site.data.reviews.reviews | limit: 1 | random %}                            
+                    <p>"{{ review.review.[page.lang] }}"</p>
                     <cite class="review-details">{{ review.visitor }} / {{ review.date }}</cite>
                 {% endfor %}                
                 </blockquote>

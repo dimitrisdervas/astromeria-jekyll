@@ -17,7 +17,9 @@ footer,
 .footer-inside {
     @include container;
 }
-
+.main {
+   clear: both;
+}
 .menu-inside {
         .menu-left ul{
             @include span(6 of 15);        
@@ -34,9 +36,6 @@ footer,
         
     }
 
-.main-wrapper {
-    @include container(65em);
-}
 .sidebar {
     @include span(5 of 16 last);
 }
@@ -44,18 +43,29 @@ footer,
     @include full;
 }
 /* Frontpage */
-.info {
+.info,
+.info-list-wrapper,
+.info-list {
     @include container;
     .info-left {
         @include span ( 6 of 12 no-gutters)
     }
     .info-right {
-         @include span ( 6 of 12 no-gutters)
+         @include span ( 6 last of 12 no-gutters)
     }
 }
 
-.reviews {
-    margin-bottom: 2em;
+.reviews-wrapper {
+   @include container;
+   .review {
+      @include gallery(4 of 12);
+      margin-bottom: 30px;
+   }
+   .reviews-inside {        
+        padding-top: 7em;
+        padding-bottom: 8em;
+        
+    }
 }
 .frontpage-gallery {
     margin-bottom: 2em;

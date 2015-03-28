@@ -1,9 +1,10 @@
 <section class="info">
     <div class="info-list-wrapper">
-        {% for info in site.info %}
-        <div class="info-list" style="background: {{ info.background }}">   
+       {% assign infos = site.info | where:'language', page.lang %}
+        {% for info in infos %}
+        <div class="info-list {% cycle 'one', 'two', 'three', 'four','five' %}">   
             <div class="info-left">
-                <img src="{{ info.image  | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
+                <img src="{{ info.image  | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" width="525" height="200" alt="">
               </div>
             <div class="info-right" >
                 <h1>

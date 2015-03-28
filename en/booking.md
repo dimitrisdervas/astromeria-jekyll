@@ -3,7 +3,7 @@ layout: default
 lang: gr
 ---
 <div class="main">
-<h2 class="page-title">Booking</h2>
+<h2 class="page-title">Booking</h2> 
 <form class="booking" action="/">
 
 <!-- Arrive -->
@@ -78,3 +78,4 @@ lang: gr
   info@astromeria-hotel.gr
   </div>
  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: Κοντά σε εξαιρετικής ομορφιάς περιοχές και Ιστορικής μνήμης
-language: gr
+lang: gr
 image: pelion-ski.jpg
 order: 2
 ---

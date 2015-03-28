@@ -3,7 +3,9 @@
         <div class="contact footer-item">
             <ul>       
                 <li><p>{{ site.data.footer.contact.address.[page.lang] }}</p></li>
-                <li><p>{{ site.data.footer.contact.tel }}</p></li>
+               {% for tel in site.data.footer.contact.tel %}
+                <li><p>{{ tel.number }}</p></li>
+               {% endfor %}
                 <li><p>{{ site.data.footer.contact.email }}</p></li>
                 </ul>
             </div>
@@ -34,9 +36,12 @@
 
             </div>
         <div class="map footer-item">
-
+             {% for mite in site.data.footer.mite %}
+                <li><p>{{ mite.number }}</p></li>
+               {% endfor %}
             </div>
         </div>
 </footer>
          <!-- Js all-->
          <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 
+         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>    

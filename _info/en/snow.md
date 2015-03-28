@@ -1,6 +1,6 @@
 ---
 title: Πολύ κοντά στο Χιονοδρομικό κέντρο Αγριολεύκες
-language: gr
+lang: en
 image: pelion-ski.jpg
 order: 5
 ---

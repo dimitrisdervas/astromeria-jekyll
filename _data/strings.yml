@@ -3,7 +3,15 @@ strings:
      offers: offers
      prices: prices
      nights: nights
+     night: night
+     fireplace: fireplace
+     rooms: rooms
+     booking: booking
    gr:
      offers: προσφορές
      prices: τιμές
      nights: νύχτες
+     night: νύχτα
+     fireplace: τζάκι
+     rooms: Διαμονή
+     booking: Κρατήσεις

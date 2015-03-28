@@ -16,3 +16,7 @@
 {% include js/active-link.js  %}
 {% include js/flickr.js  %}
 {% include js/dropkick.js  %}
+{% include js/remove-accents.js  %}
+{% include js/masonry.js  %}
+{% include js/masonry-settings.js  %}
+{% include js/google-map.js  %}

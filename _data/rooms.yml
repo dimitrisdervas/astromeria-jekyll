@@ -1,24 +1,119 @@
 rooms:
-  threebedroom:
-     prices: 
-      - season: low
-        price: 45€
-      - season: medium
-        price: 75€
-      - season: high
-        price: 85€
+  double:
+     prices:
+        - season: low
+          price: 45€
+          fireplace: 50€
+        - season: medium
+          price: 75€
+          fireplace: 80€
+        - season: high
+          price: 85€
+          fireplace: 90€
      offers: 
       - season: low
-        price: 45€
+        price: 150€
+        fireplace: 150€ 
         nights: 5
       - season: medium
-        price: 75€
+        price: 170€
+        fireplace: 200€
         nights: 5
       - season: high
-        price: 85€
+        price: 200€
+        fireplace: 240€
         nights: 5
+     image: diklino_1.jpg
+     images:
+      - image: diklino_1.jpg
+      - image: diklino_2.jpg
+      - image: diklino_3.jpg
+      - image: diklino_4.jpg
+      - image: diklino_5.jpg
+      - image: diklino_6.jpg
+      - image: diklino_7.jpg
+      
+  triple:
+     prices:
+        - season: low
+          price: 45€
+          fireplace: 50€
+        - season: medium
+          price: 75€
+          fireplace: 80€
+        - season: high
+          price: 85€
+          fireplace: 90€
+     offers: 
+      - season: low
+        price: 175€
+        fireplace: 175€
+        nights: 5
+      - season: medium
+        price: 210€
+        fireplace: 230€
+        nights: 5
+      - season: high
+        price: 240€
+        fireplace: 270€
+        nights: 5
+     image: triklino_1.jpg
      images:
       - image: triklino_1.jpg
       - image: triklino_2.jpg
       - image: triklino_3.jpg
       - image: triklino_4.jpg
+      
+  familyroom:
+     prices:
+        - season: low
+          price: 45€
+        - season: medium
+          price: 75€ 
+        - season: high
+          price: 85€
+     offers: 
+      - season: low
+        price: 220€
+        nights: 5
+      - season: medium
+        price: 280€
+        nights: 5
+      - season: high
+        price: 320€
+        nights: 5
+     image: tetraklino_1.jpg
+     images:
+      - image: tetraklino_1.jpg
+      - image: tetraklino_2.jpg
+      - image: tetraklino_3.jpg
+      - image: tetraklino_4.jpg
+      
+  tworooms:
+     prices:
+        - season: low
+          price: 45€
+          fireplace: 50€
+        - season: medium
+          price: 75€
+          fireplace: 80€
+        - season: high
+          price: 85€
+          fireplace: 90€
+     offers: 
+      - season: low
+        price: 220€
+        fireplace: 230€
+        nights: 5
+      - season: medium
+        price: 280€
+        fireplace: 300€
+        nights: 5
+      - season: high
+        price: 340€
+        fireplace: 360€
+        nights: 5
+     image: dixoro_1.jpg
+     images:
+      - image: dixoro_1.jpg
+      - image: dixoro_2.jpg

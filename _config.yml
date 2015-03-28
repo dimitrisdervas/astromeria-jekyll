@@ -10,6 +10,7 @@ collections:
     output: true
   rooms:
     output: true
+    permalink: /awesome/:path/
   info: 
     output: true
   

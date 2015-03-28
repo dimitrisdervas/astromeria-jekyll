@@ -133,6 +133,9 @@ header {
 }
 .lang-switcher {
   text-align: right;
+   a {
+      color: #E7E7E7;
+   }
 }
 /*  */
 /* Footer */
@@ -296,25 +299,25 @@ border-top: 1px solid #eeeeee;
 }
 /* Main */
 .main {
-    padding: 55px 0 0;
     .content img,
     .sidebar img,
     iframe,
     .offer img {
-    padding: 10px;
-    border: 1px solid #C2C2C2;
-    transition: 0.18s;
-    margin: 0px 0 20px 0;
+       padding: 10px;
+       border: 1px solid #C2C2C2;
+       transition: 0.18s;
+       margin: 0px 0 20px 0;
     }
 }
 
 /* BLOG */
 .page-title {
 text-align: center;
-font-size: 48px;
+font-size: 4em;
 line-height: 1;
-margin-bottom: 35px;
-padding-bottom: 15px;
+margin-bottom: 1em;
+padding-bottom: 1em;
+padding-top: 1.5em;
 }
 .entry-title {
 margin-bottom: 20px;
@@ -513,12 +516,33 @@ right: 10px;
 /*  */
 .info-list {
     margin-bottom: 2em;
-    float: left;
-        .info-left {
-        }
+   h1 {
+     padding: 1em;
+   } 
+   a {
+     color: #363636;
+   }
+   &.one {
+        background: #DCCDE8;  
+   }
+   &.two {
+      background: #EDECD2; 
+   }
+   &.three {
+      background: #e8e0cc; 
+   }
+   &.four {
+      background: #cce8db;
+   }
+   &.five {
+      background: #e7cce8;
+   }
+   .info-right {
+      
+   }
 }
 /*  */
-/* Blockquote */
+/* Reviews Blockquote */
 /*  */
 .reviews {
     blockquote {
@@ -554,6 +578,22 @@ right: 10px;
           font-style: normal;
          }
     }
+}
+/* Reviews Page */
+
+.review-inside {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5em;
+   h4 {
+      font-size: 2em;
+      padding-bottom: 0.5em;
+      text-transform: uppercase;
+   }   
+   .review-details {
+      font-weight: bold;
+      margin-bottom: 10px;
+   }
 }
 /*  */
 /* Frontpage Gallery */
@@ -679,14 +719,26 @@ a.btn, a.btn:visited, input[type=submit] {
     }
 }
 /*  */
-/* OFFERS */
+/* ROOMS and OFFERS PAGE */ 
 /*  */
-.offers {
+.offers-menu {
+    @include full;
+     li {
+        @include gallery ( 2 of 10 );
+    }
+}
+.rooms {
+   @include full;
+}
+.room {
+   @include gallery (6 of 12);
+}
+.offers-prices {
     ul {
         @include full;
         padding: 0;
         text-align: center;
-        .offer  {
+        li  {
             @include gallery (4 of 12);
             border: 1px solid #C2C2C2;
             margin: 0px 0 20px 0;
@@ -744,21 +796,7 @@ padding: 55px 0 50px;
     height:auto;
     
 }
-/*  */
-/* OFFERS */
-/*  */
-.offers-menu {
-    @include full;
-     li {
-        @include gallery ( 2 of 10 );
-    }
-}
-    .offer {
-        @include full;
-    }
-.offer-item{
-    @include gallery ( 2 of 4 );
-}
+
 
 /*  */
 /* General Form Styling

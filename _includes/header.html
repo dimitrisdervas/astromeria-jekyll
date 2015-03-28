@@ -1,21 +1,24 @@
 <header>
-    <div class="lang-switcher">
-             Curent lang:{{ page.lang }}
-         {% for lang in site.data.languages %} 
+   
+   <div class="lang-switcher">
+{% assign languagepart = page.url | split: '/' %}
 
-            {% if page.lang == lang.url %}        
-                <a href="{{ site.baseurl }}">{{ lang.language }}</a>
-            {% else %}
-              <a href='/{{ lang.url }}'>{{ lang.language }}</a>
-            {% endif %}
-        {% endfor %}
-        </div>    
+      {% for language in languagepart limit:1 offset:1 %}
+       {% assign language = language %}
+      {% endfor %}
+{% if language != nill %}
+      {% for lang in site.data.languages %}
+             <a href="{{ page.url | replace: language, lang.url }}">{{ lang.language }}</a>
+      {% endfor %}
+   {% endif %}
+  </div>
+   
   <div class="menu-inside">
       <hr>
         <div class="navigation menu-left">
             <ul>              
-                 {% for menu in site.data.menu.[page.lang]  limit:3 %}
-                    <li><a  href="{{ menu.url | prepend: site.baseurl | prepend: page.lang }}" >{{ menu.name }}</a></li>
+                 {% for menu in site.data.menu.[page.lang]  limit:3 %}               
+                    <li><a  href="/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
                    {% endfor %}
             </ul>
             </div>
@@ -25,7 +28,7 @@
             <div class="navigation menu-right">
             <ul>
               {% for menu in  site.data.menu.[page.lang]  limit:3 offset: 3 %} 
-                <li><a  href="{{ menu.url | prepend: site.baseurl }}" >{{ menu.name }}</a></li>
+                <li><a  href="/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
                {% endfor %}
             </ul>
             </div>
