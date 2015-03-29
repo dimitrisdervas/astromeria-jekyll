@@ -12,7 +12,7 @@
 	      {% endfor %}
 	{% else %}		
 	      {% for lang in site.data.languages %}
-	             <a href="{{ page.url | replace_first: language, lang.url }}">{{ lang.language }}</a>
+	             <a href="{{ site.baseurl }}{{ page.url | replace_first: language, lang.url }}">{{ lang.language }}</a>
 	      {% endfor %}
    {% endif %}
 
