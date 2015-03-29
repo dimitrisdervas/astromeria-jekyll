@@ -1,6 +1,6 @@
 ---
 layout: default
-lang: gr
+lang: en
 ---
 
 
@@ -14,7 +14,7 @@ lang: gr
                {% for room in rooms %}
                  <div class="room">
 <!--  Room Title -->
-                     <h1 class="entry-title">{{ room.title }}</h1> 
+                    <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ room.url}}">{{ room.title }}</a></h1>  
 <!--  Room Image -->
                         {% for image in site.data.rooms.rooms.[room.section].images | limit: 1 %}
                            <img src="{{ image.image | prepend: '/assets/wide/'  | prepend: site.baseurl | prepend: site.url }} " alt="">

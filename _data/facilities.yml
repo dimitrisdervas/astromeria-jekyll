@@ -1,0 +1,34 @@
+facilities:
+ en:
+  - facility: Snack-Bar
+    image: 1
+  - facility: Fireplace 
+    image: 1
+  - facility:
+    image: 1
+  - facility: 
+    image: 1
+  - facility:
+    image: 1
+  - facility:
+    image: 1
+ gr:
+  - facility: Σνακ - Μπαρ
+    image: 1
+  - facility: Τζάκι
+    image: 1
+  - facility: Κήπος
+    image: 1
+  - facility: Μπαλκόνι με Θέα
+    image: 1
+  - facility: Κοινές βεράντες
+    image: 1
+  - facility: Δωμάτια με θέα Θέα τη Θάλασσα, την Αυλή, το βουνό και τη Πισίνα
+    image: 1
+ images:
+  - image: 1
+  - image: 2
+  - image: 3
+  - image: 4
+  - image: 5
+  - image: 6

@@ -1,6 +1,6 @@
 ---
 title: Πολύ κοντά στη θάλασσα 
-lang: gr
+language: gr
 image: pelion-ski.jpg
 order: 4
 ---

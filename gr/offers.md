@@ -11,8 +11,8 @@ lang: gr
          {% assign rooms = site.rooms | where:'lang', page.lang | sort: 'order' %}
          {% for room in rooms %}
                 <div class="room">
-                           <img src="{{ site.data.rooms.rooms.[room.section].image | prepend: '/assets/wide/'  | prepend: site.baseurl }} " alt="">          
                            <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ room.url}}">{{ room.title }}</a></h1> 
+                           <img src="{{ site.data.rooms.rooms.[room.section].image | prepend: '/assets/wide/'  | prepend: site.baseurl }} " alt="">                          
                            <p> {{ room.content }} </p>
                            <div class="offers-prices">
                           <ul>

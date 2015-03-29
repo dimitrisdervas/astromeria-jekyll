@@ -1,5 +1,5 @@
 @import "susy-config";
-@import "sass-components";
+@import "bower_components/susy/sass/susy";
 
 header,
 footer,
@@ -44,13 +44,17 @@ footer,
 }
 /* Frontpage */
 .info,
+.facilities,
 .info-list-wrapper,
-.info-list {
+.facility-wrapper,
+.info,
+.facility
+{
     @include container;
-    .info-left {
+    .left {
         @include span ( 6 of 12 no-gutters)
     }
-    .info-right {
+    .right {
          @include span ( 6 last of 12 no-gutters)
     }
 }

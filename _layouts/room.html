@@ -29,17 +29,17 @@ layout: default
                         <ul>
                             {% for price in site.data.rooms.rooms.[page.section].prices %}
                                 <li class="price">              
-                                 <!--Season -->
+<!-- Season -->
                                     <h3> {{ site.data.season.[price.season].[page.lang] }}</h3>
-<!--                                    Date -->
+<!-- Date -->
                                    <h4>
                                    {% for date in site.data.season.[price.season].date %}
                                      <span>{{ date.[page.lang] }}</span>
                                    {% endfor %}
                                       </h4>
-<!--                                    Price No Fireplace  -->
+<!-- Price No Fireplace  -->
                                     <h2> {{ price.price }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
-<!--                                    Fireplace -->
+<!-- Fireplace -->
                                    {% if price.fireplace != nill %}
                                    <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
                                     <h2> {{ price.fireplace }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
@@ -50,19 +50,26 @@ layout: default
                         <p> {{ site.data.prices.seasons.[page.lang].valid }} </p>
                     </div>
            
-                    <div class="offers">
-                       <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
-                       <ul>
-                            {% for offer in  site.data.rooms.rooms.[page.section].offers %}
-                                   <li class="offer">              
-                                       <h4>{{ site.data.season.[offer.season].[page.lang] }}</h4>
-                                       <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
-                                       <h2>{{ offer.price }} </h2>
-                                   </li>                                           
-                               {% endfor %} 
-                           </ul>
-                        <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
-                   </div>
+                     <div class="offers-prices">
+                        <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
+                          <ul>
+                               {% for offer in  site.data.rooms.rooms.[page.section].offers %}
+                                      <li class="offer-price">              
+                                          <h4>{{ site.data.season.[offer.season].[page.lang] }}</h4>
+                                          <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
+                                          <h2>{{ offer.price }} </h2>
+                                          
+                                          <!-- Price with Fireplace -->
+                                      {% if offer.fireplace != nill %}
+                                      <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
+                                       <h2> {{ offer.fireplace }} </h2>
+                                      {% endif %}
+                                      
+                                      </li>                                           
+                                  {% endfor %} 
+                              </ul>
+                           <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
+                      </div>
            
            
 

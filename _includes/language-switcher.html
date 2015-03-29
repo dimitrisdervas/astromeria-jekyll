@@ -1,9 +1,19 @@
-{% assign languagepart = page.url | split: '/' %}
+   <div class="lang-switcher">
+	{% assign languagepart = page.url | split: '/' %}
+	{% assign languagesize = languagepart | size %}
+	
+    {% for language in languagepart limit:1 offset:1 %}
+      {% assign language = language %}
+    {% endfor %}
 
-{% for language in languagepart limit:1 offset:1 %}
- {% assign language = language %}
-{% endfor %}
+    {% if language == nill %}
+	      {% for lang in site.data.languages %}
+	             <a href="/{{ lang.url }}">{{ lang.language }}</a>
+	      {% endfor %}
+	{% else %}		
+	      {% for lang in site.data.languages %}
+	             <a href="{{ page.url | replace_first: language, lang.url }}">{{ lang.language }}</a>
+	      {% endfor %}
+   {% endif %}
 
-{% for lang in site.data.languages %}
-       <a href="{{ page.url | replace: language, lang.url }}">{{ lang.language }}</a>
-{% endfor %}
+  </div>

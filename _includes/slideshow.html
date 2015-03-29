@@ -2,10 +2,19 @@
           <ul class="slides">
               {% for image in site.data.slideshow.[page.lang] %} 
                 <li>
-                    <img src="{{ image.src | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
+                    <img src="{{ image.image | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" alt="">
+                   <div class="slide-book-button-wrapper">
+                         <div class="slide-book-button">
+                            <a href="/{{page.lang}}/booking" class="book-button">{{ site.data.strings.strings.[page.lang].book }}</a>
+                            {% for tel in site.data.footer.contact.tel limit: 1 %}
+                            <h3>{{ tel.number }}</h3>
+                            {% endfor %}
+                         </div>
+                      </div>
                     <div class="slide-info">
                         <h2 class="slide-title">{{ image.title }}</h2>
                         <p>{{ image.subtitle }}</p>
+                       <a href="/{{page.lang}}/booking" class="contact-button" > {{ site.data.strings.strings.[page.lang].contact }}</a>
                     </div>
                   </li>
               {% endfor %}

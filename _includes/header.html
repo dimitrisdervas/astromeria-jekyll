@@ -1,17 +1,6 @@
 <header>
    
-   <div class="lang-switcher">
-{% assign languagepart = page.url | split: '/' %}
-
-      {% for language in languagepart limit:1 offset:1 %}
-       {% assign language = language %}
-      {% endfor %}
-{% if language != nill %}
-      {% for lang in site.data.languages %}
-             <a href="{{ page.url | replace: language, lang.url }}">{{ lang.language }}</a>
-      {% endfor %}
-   {% endif %}
-  </div>
+{% include language-switcher.html %}
    
   <div class="menu-inside">
       <hr>
