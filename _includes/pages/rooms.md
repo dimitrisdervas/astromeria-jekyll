@@ -1,0 +1,46 @@
+<div class="main">
+        <div class="content">
+<!--  Page Title -->
+         <h2 class="page-title">{{ site.data.strings.strings.[page.lang].rooms }}</h2>
+           <section class="rooms">
+               {% assign rooms = site.rooms | where:'lang', page.lang %}
+               {% for room in rooms %}
+                 <div class="room">
+<!--  Room Title -->
+                    <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ room.url}}">{{ room.title }}</a></h1>  
+<!--  Room Image -->
+                        {% for image in site.data.rooms.rooms.[room.section].images | limit: 1 %}
+                           <img src="{{ image.image | prepend: '/assets/wide/'  | prepend: site.baseurl | prepend: site.url }} " alt="">
+                        {% endfor %}
+<!-- Room Description -->
+                     <p> {{ room.content }} </p>
+<!-- Room Prices -->
+                     <div class="normal-prices">        
+                          <h3>{{ site.data.strings.strings.[page.lang].prices }}</h3>
+                           <ul>
+                               {% for price in site.data.rooms.rooms.[room.section].prices %}
+                                   <li class="price">              
+<!-- Season -->
+                                       <h3> {{ site.data.season.[price.season].[page.lang] }}</h3>
+<!-- Date -->
+                                      <h4>{% for date in site.data.season.[price.season].dates %}
+                                        <span>{{ date.date }}</span>
+                                      {% endfor %}</h4>
+<!-- Price No Fireplace  -->
+                                       <h2> {{ price.price }} / {{ site.data.strings.strings.[page.lang].night }} </h2>
+<!-- Price with Fireplace -->
+                                      {% if price.fireplace != nill %}
+                                      <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
+                                       <h2> {{ price.fireplace }} / {{ site.data.strings.strings.[page.lang].night }} </h2>
+                                      {% endif %}
+                                   </li>                                           
+                               {% endfor %} 
+                           </ul>
+<!-- Valid Prices text -->
+                           <p> {{ site.data.prices.seasons.[page.lang].valid }} </p>
+                       </div>
+                   </div> 
+               {% endfor %}            
+       </section>
+   </div>
+</div>
