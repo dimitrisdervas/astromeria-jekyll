@@ -7,7 +7,7 @@
         <div class="navigation menu-left">
             <ul>              
                  {% for menu in site.data.menu.[page.lang]  limit:3 %}               
-                    <li><a  href="/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
+                    <li><a  href="{{ site.baseurl }}/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
                    {% endfor %}
             </ul>
             </div>
@@ -17,7 +17,7 @@
             <div class="navigation menu-right">
             <ul>
               {% for menu in  site.data.menu.[page.lang]  limit:3 offset: 3 %} 
-                <li><a  href="/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
+                <li><a  href="{{ site.baseurl }}/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a></li>
                {% endfor %}
             </ul>
             </div>
