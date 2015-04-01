@@ -1,0 +1,20 @@
+@mixin no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+@mixin no-bullets {
+  list-style: none;
+  li {
+    @include no-bullet;
+  }
+}
+
+@mixin inline-list {
+  list-style-type: none;
+  &, & li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+}

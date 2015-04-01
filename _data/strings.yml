@@ -1,23 +1,74 @@
-strings:
-   en:
-     offers: offers
-     prices: prices
-     nights: nights
-     night: night
-     fireplace: fireplace
-     rooms: rooms
-     booking: booking
-     facilities: facilities
-     contact: contact
-     book: book
-   gr:
-     offers: προσφορές
-     prices: τιμές
-     nights: νύχτες
-     night: νύχτα
-     fireplace: τζάκι
-     rooms: Διαμονή
-     booking: Κρατήσεις
-     facilities: Παροχές
-     contact: επικοινωνία
-     book: κράτηση
+en:
+  offers: offers
+  prices: prices
+  nights: nights
+  night: night
+  fireplace: fireplace
+  rooms: rooms
+  facilities: facilities
+  contact: contact
+  book: book
+  booking:
+     title: booking
+     arrival: arrival
+     departure: departure
+     rooms: 
+       - room: Double Room
+         value: Double
+       - room: Double Room with Fireplace
+         value: DoubleFireplace
+       - room: Triple Room
+         value: Triple
+       - room: Family Room
+         value: Family 
+       - room:  Appartment Two Bedrooms
+         value: TwoRooms 
+       - room:  Appartment Two Bedrooms with Fireplace
+         value:  TwoRoomsFireplace
+     room: room
+     adults: Adults
+     children: Children
+     name: you name
+     email: your email
+     phone: phone
+     country: Country
+     comments: comments
+     submit: book
+  
+gr:
+  offers: προσφορές
+  prices: τιμές
+  nights: νύχτες
+  night: νύχτα
+  fireplace: τζάκι
+  rooms: Διαμονή
+  booking: Κρατήσεις
+  facilities: Παροχές
+  contact: επικοινωνία
+  book: κράτηση
+  booking:
+     title: Κρατήσεις
+     arrival: άφιξη
+     departure: αναχώρηση
+     rooms:
+       - room: Double Room
+         value: Double
+       - room: Double Room with Fireplace
+         value: DoubleFireplace
+       - room: Triple Room
+         value: Triple
+       - room: Family Room
+         value: Family 
+       - room:  Appartment Two Bedrooms
+         value: TwoRooms 
+       - room:  Appartment Two Bedrooms with Fireplace
+         value:  TwoRoomsFireplace
+     room: δωμάτιo
+     adults: Ενήλικες
+     children: Παιδιά
+     name: όνομα
+     email: email
+     phone: τηλέφωνο
+     country: Χώρα
+     comments: Σχόλια
+     submit: κράτηση

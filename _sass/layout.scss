@@ -21,7 +21,7 @@ footer,
    clear: both;
 }
 .menu-inside {
-        .menu-left ul{
+        .menu-left {
             @include span(6 of 15);        
         }
         .logo {

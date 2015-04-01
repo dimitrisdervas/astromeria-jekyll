@@ -1,3 +1,0 @@
-$(".dk").dropkick({
-		theme: 'ci'
-	});
