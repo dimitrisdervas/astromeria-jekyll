@@ -1,34 +1,53 @@
 <div class="main">
  <div class="content">
-    <h2 class="page-title">{{ site.data.strings.strings.[page.lang].offers }}</h2>
+    <h2 class="page-title">{{ site.data.strings.[page.lang].offers }}</h2>
+<!-- Group offers by number of nights -->
+      {% for offer in  site.data.rooms.offers %}
+        <h4>{{ offer.nights }} {{ site.data.strings.[page.lang].nights }}</h4>
+         {% assign night = offer.nights %}
         <section class="rooms">
+<!-- Show all rooms -->
          {% assign rooms = site.rooms | where:'lang', page.lang | sort: 'order' %}
          {% for room in rooms %}
                 <div class="room">
                            <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ room.url}}">{{ room.title }}</a></h1> 
                            <img src="{{ site.data.rooms.rooms.[room.section].image | prepend: '/assets/wide/'  | prepend: site.baseurl }} " alt="">                          
-                           <p> {{ room.content }} </p>
-                           <div class="offers-prices">
+<!--  <p> {{ room.content }} </p> -->
+                           <div class="offers-prices prices">
+                         
                           <ul>
+<!-- Show offers per room -->
                                {% for offer in  site.data.rooms.rooms.[room.section].offers %}
-                                      <li class="offer-price">              
-                                          <h4>{{ site.data.season.[offer.season].[page.lang] }}</h4>
-                                          <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
-                                          <h2>{{ offer.price }} </h2>
-                                          
-                                          <!-- Price with Fireplace -->
-                                      {% if offer.fireplace != nill %}
-                                      <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
-                                       <h2> {{ offer.fireplace }} </h2>
+<!-- Show prices for each nights offer -->
+<!-- night variable is assigned above -->
+<!-- {{ offer.nights }}/ {{ night }} -->
+                                  {% if offer.nights == night %}
+                                      <li class="offer-price ">              
+                                          <h5>{{ site.data.season.[offer.season].[page.lang] }}</h5>
+                                         <h2>{{ offer.price }} </h2>
+                                          <h2>{{ offer.discount }}</h2>
+<!-- Show Price with Fireplace if it exists -->
+                                               {% if offer.fireplace != nill %}
+                                                     <h3>{{ site.data.strings.[page.lang].fireplace }} <span>{{ offer.fireplace }}</span></h3>
+                                                        {% else %}
+                                                     <h3>{{ site.data.strings.[page.lang].fireplace-included }}</h3> 
+                                                  {% endif %}
+                                            </li>  
                                       {% endif %}
-                                      
-                                      </li>                                           
                                   {% endfor %} 
                               </ul>
-                           <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
+                         
                       </div>
                        </div>
                {% endfor %}
             </section>
+     {% endfor %} 
+<!-- Valid Prices text -->
+           <p> {{ site.data.season.valid.[page.lang] }} </p>
+           <p> {{ site.data.season.night.[page.lang] }} </p>
+           <p> {{ site.data.season.include.[page.lang] }} </p>
+           <p> {{ site.data.season.exclude.[page.lang] }} </p>
+ <!-- Seasons -->
+        {% include blocks/season-dates.html %}
       </div>
 </div>

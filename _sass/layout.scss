@@ -2,23 +2,31 @@
 @import "bower_components/susy/sass/susy";
 
 header,
+.page,
 footer,
-.slider {
+.slider,
+.footnote-wrapper {
     @include full;
 }
-
-.main,
-.content, 
-.booking,
-.reviews,
-.frontpage-gallery,
+/* Header */
 .lang-switcher,
 .menu-inside,
-.footer-inside {
+/* Frontpage */
+.frontpage-gallery,
+/* all pages */
+.main,
+.content, 
+/* Custom pages */
+.booking,
+.reviews,
+/* Footer */
+.footer-inside,
+.footnote {
     @include container;
 }
 .main {
    clear: both;
+   margin-bottom: 6em;
 }
 .menu-inside {
         .menu-left {
@@ -39,9 +47,7 @@ footer,
 .sidebar {
     @include span(5 of 16 last);
 }
-.booking-wrap {
-    @include full;
-}
+
 /* Frontpage */
 .info,
 .facilities,
@@ -77,4 +83,16 @@ footer,
     @include gallery(3 of 12);
     }
 }
-
+/* Booking Page */
+.contact-booking,
+#map-canvas {
+  @include container;
+}
+#map-canvas {
+   height: 30em;
+}
+/* Footer */
+.footnote {
+   @include container;
+   clear: both;
+}

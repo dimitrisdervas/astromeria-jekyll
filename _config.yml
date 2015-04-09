@@ -13,7 +13,15 @@ collections:
     permalink: /:path/
   info: 
     output: true
-  
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "info" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "info"
+      
+      
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 flickr:
   cache_dir:       ./_cache/flickr

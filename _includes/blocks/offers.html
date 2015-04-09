@@ -1,0 +1,35 @@
+ <div class="offers-prices prices">
+        <h3 class="block-title">{{ site.data.strings.[page.lang].offers }}</h3>
+          <!-- Group offers by number of nights -->
+            {% for offer in  site.data.rooms.offers %}
+              <h4 class="offer-title">{{ offer.nights }} {{ site.data.strings.[page.lang].nights }}</h4>
+               {% assign night = offer.nights %}
+                          <ul>
+                               {% for offer in  site.data.rooms.rooms.[page.section].offers %}
+<!-- Show prices for each nights offer -->
+<!-- night variable is assigned above -->
+<!-- {{ offer.nights }}/ {{ night }} -->
+                                  {% if offer.nights == night %}
+                                      <li class="offer-price">   
+<!-- Season h4 -->
+                                         <h4><a href="#seasons">{{ site.data.season.[offer.season].[page.lang] }}</a></h4>
+<!-- Price No Fireplace  h2 -->                                         
+                                          <h2>{{ offer.price }} </h2>
+                                          
+<!-- Price with Fireplace h4 -->
+                                      {% if offer.fireplace != nill %}
+                                     <h5>{{ site.data.strings.[page.lang].fireplace }} <span>{{ offer.fireplace }}</span></h5>
+                                         {% else %}
+                                      <h5>{{ site.data.strings.[page.lang].fireplace-included }}</h5>    
+                                      {% endif %}
+<!-- Booking -->
+                                   <div class="booking-link">                    
+                                      <a href="/{{page.lang}}/booking">{{ site.data.strings.[page.lang].book }}</a>   
+                                         </div>
+                                      </li>   
+                             {% endif %}
+                                  {% endfor %} 
+                              </ul>
+    {% endfor %}
+                           <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
+                      </div>

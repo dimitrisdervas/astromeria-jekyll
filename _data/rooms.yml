@@ -1,28 +1,53 @@
+offers:
+ - nights: 5
+ - nights: 3
+seasons:
+ - season: low
+ - season: medium
+ - season: high
 rooms:
   double:
      prices:
-        - season: low
-          price: 45€
-          fireplace: 50€
-        - season: medium
-          price: 75€
-          fireplace: 80€
-        - season: high
-          price: 85€
-          fireplace: 90€
+      - season: low
+        price: 45€
+        fireplace: 50€
+      - season: medium
+        price: 75€
+        fireplace: 80€
+      - season: high
+        price: 85€
+        fireplace: 90€
      offers: 
       - season: low
         price: 150€
+        discount: 30%
         fireplace: 150€ 
         nights: 5
       - season: medium
         price: 170€
+        discount: 30%
         fireplace: 200€
         nights: 5
       - season: high
         price: 200€
+        discount: 30%
         fireplace: 240€
         nights: 5
+      - season: low
+        price: 150€
+        discount: 30%
+        fireplace: 150€ 
+        nights: 3
+      - season: medium
+        price: 170€
+        discount: 30%
+        fireplace: 200€
+        nights: 3
+      - season: high
+        price: 200€
+        discount: 30%
+        fireplace: 240€
+        nights: 3
      image: diklino_1.jpg
      images:
       - image: diklino_1.jpg
@@ -117,3 +142,24 @@ rooms:
      images:
       - image: dixoro_1.jpg
       - image: dixoro_2.jpg
+  ammenities:
+   en:
+     - facility: Φαξ/Φωτοτυπικό
+     - facility: Ανεμιστήρας
+     - facility: Θέρμανση
+     - facility: Μπανιέρα ή Ντους
+     - facility: Στεγνωτήρας Μαλλιών
+     - facility: Τηλεόραση
+     - facility: Μικρή Κουζίνα
+     - facility: Κουζινικά Σκεύη
+     - facility: Ψυγείο
+   gr:
+     - facility: Φαξ/Φωτοτυπικό
+     - facility: Ανεμιστήρας
+     - facility: Θέρμανση
+     - facility: Μπανιέρα ή Ντους
+     - facility: Στεγνωτήρας Μαλλιών
+     - facility: Τηλεόραση
+     - facility: Μικρή Κουζίνα
+     - facility: Κουζινικά Σκεύη
+     - facility: Ψυγείο

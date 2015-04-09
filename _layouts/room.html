@@ -5,7 +5,7 @@ layout: default
 
 
 <div class="main">
-    <div class="main-wrapper">   
+    <div class="content room-page">   
         
         <h2 class="page-title">{{ page.title }}</h2>
         
@@ -21,60 +21,18 @@ layout: default
 
 
         <div class="content">
-            
-           {{ page.content }} 
-           
-                     <div class="normal-prices">        
-                       <h3>{{ site.data.strings.strings.[page.lang].prices }}</h3>
-                        <ul>
-                            {% for price in site.data.rooms.rooms.[page.section].prices %}
-                                <li class="price">              
-<!-- Season -->
-                                    <h3> {{ site.data.season.[price.season].[page.lang] }}</h3>
-<!-- Date -->
-                                   <h4>
-                                   {% for date in site.data.season.[price.season].date %}
-                                     <span>{{ date.[page.lang] }}</span>
-                                   {% endfor %}
-                                      </h4>
-<!-- Price No Fireplace  -->
-                                    <h2> {{ price.price }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
-<!-- Fireplace -->
-                                   {% if price.fireplace != nill %}
-                                   <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
-                                    <h2> {{ price.fireplace }} / {{ site.data.strings.strings.[page.lang].nights }} </h2>
-                                   {% endif %}
-                                </li>                                           
-                            {% endfor %} 
-                        </ul>
-                        <p> {{ site.data.prices.seasons.[page.lang].valid }} </p>
-                    </div>
-           
-                     <div class="offers-prices">
-                        <h3>{{ site.data.strings.strings.[page.lang].offers }}</h3>
-                          <ul>
-                               {% for offer in  site.data.rooms.rooms.[page.section].offers %}
-                                      <li class="offer-price">              
-                                          <h4>{{ site.data.season.[offer.season].[page.lang] }}</h4>
-                                          <h5>{{ offer.nights }} {{ site.data.strings.strings.[page.lang].nights }}</h5>
-                                          <h2>{{ offer.price }} </h2>
-                                          
-                                          <!-- Price with Fireplace -->
-                                      {% if offer.fireplace != nill %}
-                                      <h3>{{ site.data.strings.strings.[page.lang].fireplace }}</h3>
-                                       <h2> {{ offer.fireplace }} </h2>
-                                      {% endif %}
-                                      
-                                      </li>                                           
-                                  {% endfor %} 
-                              </ul>
-                           <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
-                      </div>
+         <div class="description">
+         {{ page.content }} 
+           </div>   
+         {% include blocks/prices.html %}
+         
+         {% include blocks/offers.html %}
+                    
            
            
 
       </div>
-        {% include reviews.html %}
-        
+        {% include blocks/reviews-quote.html %}
+        {% include blocks/season-dates.html %}
     </div>
 </div>

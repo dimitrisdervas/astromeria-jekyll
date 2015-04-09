@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+
+
+<div class="main">
+    <div class="content info-page">   
+        
+        <h2 class="page-title">{{ page.title }}</h2>
+        
+        <div class="info-image">         
+            <img src="{{ page.image | prepend: '/assets/frontpage-info/1030x535/' | prepend: site.baseurl }}" alt="">
+          </div>
+
+
+        <div class="content">
+            <div class="description">
+            {{ page.content }} 
+              </div>   
+         </div>
+       
+ {% include blocks/frontpage-info.html %}
+       
+    </div>
+</div>

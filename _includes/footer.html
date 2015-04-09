@@ -1,47 +1,60 @@
 <footer class="footer-wrapper footer">
-    <div class="footer-inside">
-        <div class="contact footer-item">
-            <ul>       
-                <li><p>{{ site.data.footer.contact.address.[page.lang] }}</p></li>
-               {% for tel in site.data.footer.contact.tel %}
-                <li><p>{{ tel.number }}</p></li>
-               {% endfor %}
-                <li><p>{{ site.data.footer.contact.email }}</p></li>
-                </ul>
-            </div>
-
-        <div class="social footer-item">
-            <ul>
-            {% for social in site.data.footer.social %}
-               <li><a href="{{ social.url }}">
-                            <i class="fa fa-{{ social.name }}"></i>
-                        </a>
-                   </li>
-             {% endfor %}
-                </ul>
-            </div>
-
-        <div class="widget  footer-item">
-            {% for widget in site.data.footer.widget %}
-
-            <div>
-            {{ widget.html.[page.lang] }}
-            </div>
-             {% endfor %}
-            </div>
-        <div class="newsletter footer-item ">
-
-            </div>
-        <div class="weather footer-item ">
-
-            </div>
-        <div class="map footer-item">
-             {% for mite in site.data.footer.mite %}
-                <li><p>{{ mite.number }}</p></li>
-               {% endfor %}
-            </div>
+<!-- 3 column footer -->
+    <div class="footer-inside">       
+<!-- Hotel Contact info -->
+           <div class="contact footer-item">
+              <h3>{{ site.data.strings.[page.lang].contact }}</h3>
+               <ul>       
+                   <li>{{ site.data.contact.contact.address.[page.lang] }}</li>
+                  {% for tel in site.data.contact.contact.tel %}
+                   <li>Tel: {{ tel.number }}</li>
+                  {% endfor %}
+                   <li>{{ site.data.contact.contact.email }}</li>
+                   </ul>
+               </div>
+       
+<!-- Social Networks -->
+           <div class="social footer-item">
+               <!-- Block title -->
+              <h3>{{ site.data.strings.[page.lang].footer.social }}</h3>
+               <!-- Block content -->
+               <ul>
+               {% for social in site.data.contact.social %}
+                  <li><a href="{{ social.url }}">
+                               <i class="fa fa-{{ social.name }}"></i>
+                           </a>
+                      </li>
+                {% endfor %}
+                   </ul>
+              <h3 class="blog-link-footer"><a href="{{ site.baseurl }}{{page.lang}}/blog">Blog</a></h3>
+               </div>
+<!-- Reviews -->
+           <div class="reviews  footer-item">
+               <h3>{{ site.data.strings.[page.lang].reviews }}</h3>
+               {% for review in site.data.contact.reviews %}
+                  <div class="brand-logo" >
+                  <img src="{{ site.baseurl }}/assets/{{ review.image }}" alt="{{ review.name }}">
+                  </div>
+                {% endfor %}
+               </div>
         </div>
-</footer>
+   </footer>
+
+<!-- Footnote -->
+   <div class="footnote-wrapper">
+         <div class="footnote">
+            <h6>
+            <!--            Copyright -->
+            Hotel Astromeria &copy; 2011-<script type="text/javascript">document.write(new Date().getFullYear())</script> 
+            <!--            MHTE -->
+            {% for mite in site.data.contact.mite %}
+            <span>- MHTE{% cycle '1' , '2' %}: {{ mite.number }}</span>
+            {% endfor %}
+               </h6>
+         </div>
+      </div>
+
          <!-- Js all-->
-         <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 
          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>    
+         <script type="text/javascript" src="{{ site.baseurl }}/js/js-all.js "></script> 
+         

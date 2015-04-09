@@ -1,0 +1,25 @@
+<div class="main">
+ <div class="content">
+    <h2 class="page-title">{{ site.data.strings.[page.lang].activities }}</h2>
+        <section class="activities">
+
+                <div class="facility-wrapper">      
+                     <ul>
+                                   {% for activity in  site.data.activities.activities.[page.lang] %}
+                                   
+                                      <li class="activity">
+                                           <div class="activity {% cycle 'left', 'right' %} ">
+                                            
+            <img src="{{  facility.image  | prepend: '/assets/'  | prepend: site.baseurl | prepend: site.url }}" width="525" height="200" alt="">
+                                        
+                                            </div>
+                                           <div class="activity {% cycle 'right', 'left' %}" >
+                                              <h1> {{ activity.activity }} </h1>
+                                           </div>
+                                      </li>                                           
+                                  {% endfor %} 
+                              </ul>
+                      </div>                      
+            </section>
+            </div>
+      </div>

@@ -1,7 +1,7 @@
 ---
 layout: room
 lang: en
-title: Apartment - Two Bedrooms  
+title: Two Bedrooms Apart.
 categories: rooms
 section: tworooms
 published: true

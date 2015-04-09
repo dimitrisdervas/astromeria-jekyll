@@ -9,105 +9,140 @@
 @import "sidebar";
 
 /* Compass mixins */
-    
+/* $ en-font: "Roboto";
+$ gr-font: "Roboto"; */
 
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeue Bold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/BebasNeue Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/BebasNeue Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/BebasNeue Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/BebasNeue Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-@font-face {
-  font-family: 'PT Sans';
-  src: url('fonts/PTS55F-webfont.eot'); /* IE9 Compat Modes */
-  src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/PTS55F-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/PTS55F-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/PTS55F-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
+
+
 /* -----------------------------------------
 	General
 ----------------------------------------- */
+
+/*  */
+/* normalise and more */
+/*  */
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box;
 }
-    
-h1, h2, h3, h4, h5, h6 {
-  line-height: normal;
-  margin: 0 0 15px 0;
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: #6c6c6c; }
-
-h1 {
-  font-size: 24px; }
-
-h2 {
-  font-size: 20px; }
-
-h3 {
-  font-size: 18px; }
-
-h4 {
-  font-size: 16px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  font-size: 12px; }
-
-p {
-  margin: 0 0 15px 0; }
-
+ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
 img {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  height: auto; }
-
-a, a:visited {
-  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
-  outline: none; }
-
-a:active, a:focus {
+  height: auto; 
+}
+a, 
+a:visited ,
+a:active, 
+a:focus {
   outline: none;
-  text-decoration: none; }
-a {
-color: #428bca;
-text-decoration: none;
+  text-decoration: none; 
 }
-a:hover, a:focus {
-color: #2a6496;
-}
+/*  */
+/* Typography */
+/*  */
+$font-numbers: Montserrat, Helvetica, Arial, sans-serif;
 body {
-  font-family: Lato, sans-serif;
+  font-family: Roboto slab, Helvetica, Arial, sans-serif;
   line-height: 1.625;
   font-size: 15px;
-  color: #1E1E1E; }
 
-ul {
-    list-style-type: none;
 }
+h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+  margin: 0 0 15px 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+p {
+  margin: 0 0 15px 0; 
+}
+
+/*  */
+/* Colors */
+/*  */
+$grey: #848484;
+$light-grey: #E5E5E5;
+$lighter-grey: #F7F7F7;
+$black: #1E1E1E;
+$blue: #428bca;
+$light-blue: #4280A6;
+$white: #ffffff;
+$light-red: #BD6E6E;
+/* Defaults */
+$background-grey: $grey;
+$text-color: $black;
+$a-color: $blue;
+$hover-color: $light-blue;
+$header-text: $white;
+$border-color: $light-grey;
+/* Frontpage Slideshow */
+$slides-text: $white;
+$button-text: $white;
+/* Reviews */
+$reviews-bg: $light-grey;
+/* Prices */
+$prices-color: $light-blue;
+/* Seasons */
+$seasons-dates: $light-red;
+/* Blocks Background */
+$block-bg: lighten( $black, 85%);
+/* Footer */
+$footer-bg: $lighter-grey;
+
+
+
+body {
+     color: $text-color; 
+}
+
+a {
+color: $a-color;
+   &:hover,
+   &:focus {
+   color: $hover-color;
+   }
+}
+
+
+
     
 /* Header */
 .frontpage header {
     position: relative;
     z-index: 10;
-    height: 100px;    
-    font-family: Montserrat, sans-serif;
-    font-weight: 400;
-    color: #FFF;    
+    height: 100px;
+    color: $header-text;    
 }
 header {
-   background: #848484;
+   background: $background-grey;
     .logo {
-      background: #848484;
+      background: $background-grey;
     }
     li {
          @include inline-list;
@@ -116,24 +151,10 @@ header {
 .lang-switcher {
   text-align: right;
    a {
-      color: #E7E7E7;
+      color: darken( $header-text, 10% );
    }
 }
-/*  */
-/* Footer */
-/*  */
-.footer {
-    .footer-item {
-         @include gallery ( 4 of 12);
-    }
-    .social ul {
-        @include inline-list;
-       
-    }
-   .booking {
-      background: #003580;
-   }
-}
+
 
 
 
@@ -150,10 +171,15 @@ margin-bottom: 20px;
 border: 0;
 border-top: 1px solid #eeeeee;
 }
-/* Slideshow */
+/*  */
+/* Frontpage Slideshow */
+/*  */
 .slider {
-    color: #FFF;
+    color: $slides-text;
     top: -40px;
+   a {
+      color: $button-text;
+   }
 }
 .flexslider {
     margin: 0;
@@ -187,28 +213,21 @@ border-top: 1px solid #eeeeee;
         text-align: center;
         top: 35%;
         background: rgba(0, 0, 0, 0.15);
-        -webkit-box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
-        -ms-box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
-        -o-box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0px 100px 71px rgba(0, 0, 0, 0.15);
     }
     .slide-title {
         font-size: 48px;
         font-weight: bold;
         margin-bottom: 5px;
-        color: #ffffff;
     }
     a.book-button ,
     a.contact-button  {
          background: #848484;
          padding: 0.5em 3em;
-         color: #ffffff;
+
     }
    h3 {
       margin-top: 1em;
-      color: #ffffff;
-      font-family: "Open Sans";
       font-weight: 400;
    }
     .flex-control-nav {
@@ -229,8 +248,6 @@ border-top: 1px solid #eeeeee;
             }
             a.flex-active,
             a:hover {
-                background: #FFF;
-                border-color: #FFF;
             }
         }
     }
@@ -243,8 +260,9 @@ border-top: 1px solid #eeeeee;
 }
 
 
-
+/*  */
 /* Main */
+/*  */
 .main {
     .content img,
     .sidebar img,
@@ -256,8 +274,9 @@ border-top: 1px solid #eeeeee;
        margin: 0px 0 20px 0;
     }
 }
-
+/*  */
 /* BLOG */
+/*  */
 .page-title {
 text-align: center;
 font-size: 4em;
@@ -269,63 +288,18 @@ padding-top: 1.5em;
 .entry-title {
 margin-bottom: 20px;
 }
-/* -----------------------------------------
-	Booking Form
------------------------------------------ */
-.booking input[type=text],
-.booking input[type=email],
-.booking textarea, .booking .dk_container {
-  width: 100%;
-  margin-bottom: 25px; }
 
-
-.booking-wrap {
-  z-index: 15;
-  position: relative;
-  background: rgba(0, 0, 0, 0.4);
-  color: #FFF;
-  height: 150px;
-  margin: -205px 0 0 0;
-  padding-top: 52px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-    input[type="text"], 
-    input[type="password"], 
-    input[type="date"], 
-    input[type="datetime"], 
-    input[type="email"], 
-    input[type="number"], 
-    input[type="search"], 
-    input[type="tel"], 
-    input[type="time"], 
-    input[type="url"],
-    textarea {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    border-radius: 0;
-    box-shadow: none;
-    width: auto;
-    padding: 12px 18px;
-    height: auto;
-    border: 2px solid #C2C2C2;
-    line-height: normal;
-    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
-    min-width: 80%;
-    color: #6d6e71;
-    background: transparent;
-    }
-}
 /* Date */
-    .ui-datepicker-trigger {
-    position: absolute;
-    right: 28px;
-    border: none;
-    top: 7px;
-    background: none;
-    color: #C2C2C2;
-    font-size: 18px;
-    outline: none;
-    }
+.ui-datepicker-trigger {
+   position: absolute;
+   right: 28px;
+   border: none;
+   top: 7px;
+   background: none;
+   color: #C2C2C2;
+   font-size: 18px;
+   outline: none;
+}
 
 
 #formerrors {
@@ -356,37 +330,58 @@ margin-bottom: 20px;
 /*  */
 /* Frontpage INFO */
 /*  */
-.info-list {
-    margin-bottom: 2em;
-   h1 {
-     padding: 1em;
-   } 
+.info-list-wrapper {
+    margin-bottom: 2em; 
+   .info {
+      border: 4px solid #F0F0F0;
+      margin-bottom: 2em;
+         h4 {
+           padding: 2em 1em;
+         } 
+/*       Reset from .main img */
+         img {
+            padding: 0;
+           border: none;
+           transition: 0.18s;
+           margin: 0;
+         }
+      span {
+         float: right;
+         font-size: 16px;
+      }
+      
+   }
    a {
-     color: #363636;
+     color: $text-color;
    }
-   &.one {
-        background: #DCCDE8;  
+   .one {
+      background: #BA5757;
    }
-   &.two {
-      background: #EDECD2; 
+   .two {
+      background: #99B052; 
    }
-   &.three {
-      background: #e8e0cc; 
+   .three {
+      background: #BA9257; 
    }
-   &.four {
-      background: #cce8db;
+   .four {
+      background: #AB5085;
    }
-   &.five {
-      background: #e7cce8;
+   .five {
+      background: #4E90A6;
    }
    .info-right {
       
    }
 }
+/* Single Info Page */
+.info-image {
+   padding: 10px;
+}
 /*  */
 /* Reviews Blockquote */
 /*  */
-.reviews {
+.reviews-quote {
+   margin-bottom: 3em;
     blockquote {
       text-align: center;
       margin: 0;
@@ -398,45 +393,29 @@ margin-bottom: 20px;
           width: 45px;
           position: absolute;
           height: 1px;
-          background: #E5E5E5;
+          background: $reviews-bg;
           bottom: 0;
           left: 50%;
           margin-left: -22px; }
          i.fa {
           font-size: 44px;
-          color: #E5E5E5;
+          color: $reviews-bg;
           margin-bottom: 15px; }
-         p {
-          letter-spacing: -0.03em;
-          font-family: Montserrat, sans-serif;
-          font-size: 24px;
-          font-weight: bold;
-          color: #6c6c6c; }
+         h1 {
+            letter-spacing: -0.03em;
+            font-weight: bold;
+            color: #6c6c6c; 
+         }
          cite {
           text-transform: uppercase;
           font-size: 12px;
           letter-spacing: 0.2em;
-          color: #8a8a8a;
+          color: darken( $reviews-bg , 70% );
           font-style: normal;
          }
     }
 }
-/* Reviews Page */
 
-.review-inside {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 1.5em;
-   h4 {
-      font-size: 2em;
-      padding-bottom: 0.5em;
-      text-transform: uppercase;
-   }   
-   .review-details {
-      font-weight: bold;
-      margin-bottom: 10px;
-   }
-}
 /*  */
 /* Frontpage Gallery */
 /*  */
@@ -473,7 +452,6 @@ margin-bottom: 20px;
     top: 10px;
     color: #FFF;
     text-transform: uppercase;
-    font-size: 11px;
     padding: 7px 25px;
     line-height: normal;
     width: 130px;
@@ -525,11 +503,11 @@ margin-bottom: 20px;
         opacity: 0.8; }
        }
 }
+/*  */
 /* Buttons */
 /*  */
 a.btn, a.btn:visited, input[type=submit] {
     line-height: normal;
-    font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: bold;
     border: 2px solid #C2C2C2;
@@ -540,15 +518,148 @@ a.btn, a.btn:visited, input[type=submit] {
     outline: none;
     transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
+
 /*  */
-/* Room html */
+/* ROOMS and OFFERS PAGE */ 
+/*  */
+
+
+.rooms {
+   @include full;
+   .room {
+      @include gallery ( 3 of 12 );
+      margin-bottom: 2em;
+   }
+}
+/*  */
+/* Default block Settings */
+/*  */
+.block-title {
+  color: #818181;
+  font-weight: bold;
+  margin-bottom: 1.3em;
+}
+/*  */
+/* Prices and Offers Block */
+/*  */
+.prices {
+   margin-bottom: 4em;
+    ul {
+        @include container;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 2em;
+        color: lighten($text-color , 50%);
+        li  {
+           @include gallery (4 of 12);
+           border: 1px solid $border-color;
+           margin: 0px 0 20px 0;
+           background: $block-bg;
+           h2 {
+              font-size: 44px;
+              font-family: $font-numbers;
+           }
+           h4 {
+              padding: 15px 0 0 0;
+           }
+           h3 {
+
+           }
+           a {
+              color: lighten($text-color , 50%);
+           }
+/*  Price with Fireplace */
+           span {
+              font-family: $font-numbers;
+              padding-right: 0.3em;
+              font-size: 28px;
+              padding-right: 0.3em;
+           }
+        }
+       }
+      .booking-link {
+         display:block;
+         text-align: center;
+         a {
+            background: darken($block-bg , 5%);
+            padding: 0.5em 3em;
+            line-height: 3em;
+            &:hover {
+               background: $prices-color;
+               color: $button-text;
+            }
+         }
+      }
+   }
+
+.offers-prices {
+   h2,
+   span {
+      color: #D33E93 ;
+   }
+   .offer-title {
+     text-align: center;
+     font-size: 36px;
+     font-weight: bold;
+     color: #626262;
+   }
+}
+.normal-prices {
+   h2{
+      color: $prices-color;                           
+   } 
+      span {
+      color: #6c6c6c ;
+   }
+}
+/*  */
+/* Seasons */
+/*  */
+.seasons {
+    @include container;
+      ul {
+      @include container;
+      padding: 0;
+         .season-dates {
+         @include gallery( 3 of 12);
+         border: 1px solid $border-color;
+         margin: 0px 0 20px 0;
+         background: $block-bg;
+         padding: 0 1em 1em;
+         .date {
+            color: $seasons-dates;
+            margin: 0;
+            
+         }
+         h3 {
+            text-align: center;
+            padding: 0.5em 0;
+         }
+         h4 {
+            margin-bottom: 2em;
+         }
+         span {
+            padding-right: 0.3em;
+            font-size: 18px;
+            color: #6c6c6c;
+            padding-right: 0.3em;
+         }
+         .date {
+
+         }
+         .season {
+
+         }
+      }
+   }
+}
+/*  */
+/* Single Room html */
 /*  */
 .flexslider-rooms {
-    @include full;
     margin-bottom: 2em;
     .slides {
         padding: 10px;
-        border: 1px solid #C2C2C2;
     }
     .flex-control-thumbs li {
         @include gallery ( 1 of 10 );
@@ -560,86 +671,80 @@ a.btn, a.btn:visited, input[type=submit] {
     margin: 0px 0 20px 0;
     }
 }
+/* Margin Bottom sinle page room  */
+.description,
+.prices {
+   margin-bottom: 4em;
+}
 /*  */
-/* ROOMS and OFFERS PAGE */ 
+/* Reviews Page */
 /*  */
-.offers-menu {
-    @include full;
-     li {
-        @include gallery ( 2 of 10 );
+.review-inside {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5em;
+   h4 {
+      padding-bottom: 0.5em;
+      text-transform: uppercase;
+   }   
+   .review-details {
+      font-weight: bold;
+      margin-bottom: 10px;
+   }
+}
+/*  */
+/* Footer */
+/*  */
+.footer {
+   border-top: 1px solid $border-color;
+   border-bottom: 1px solid $border-color;
+   padding: 2em;
+  
+}
+/*    Footer Background */
+.footer,
+.footnote-wrapper {
+   background: $footer-bg;    
+   }
+/* Footer 3 columns */
+.footer-inside {
+   h3 {
+      font-weight: normal;
+   }
+    .footer-item {
+         @include gallery ( 4 of 12);
     }
-}
-.rooms {
-   @include full;
-}
-.room {
-   @include gallery (6 of 12);
-   margin-bottom: 2em;
-}
-.offers-prices {
-    ul {
-        @include full;
-        padding: 0;
-        text-align: center;
-        li  {
-            @include gallery (4 of 12);
-            border: 1px solid #C2C2C2;
-            margin: 0px 0 20px 0;
-            background: #fcfcfc;
-                h4 {
-                    font-size: 2em;
-                    padding: 15px 0 0 0;
-                }
-                h2 {
-                    font-size: 3em;
-                    color: #D33E93 ;
-                }
-                span {
-                    padding-right: 0.3em;
-                    font-size: 18px;
-                    color: #6c6c6c;
-                    padding-right: 0.3em;
-                }
-            }
+   .contact {
+      text-align: left;
+   }
+    .social {
+       text-align: center;
+       h3 {
+          margin-bottom: 5px;
+       }
+       ul {
+          margin-bottom: 20px;
+          li {
+             font-size: 3em;
+             @include inline-list;
+          } 
+       }
+       .blog-link-footer {
+            border-top: 1px solid $border-color;
+       }
     }
+   .reviews {
+      text-align: right;
+      .brand-logo {
+           padding: 0.5em 0 0.5em;
+      }
+   }
 }
-.normal-prices {
-    ul{
-        @include full;        
-        padding: 0;
-        text-align: center;
-        li {            
-            @include gallery (4 of 12);            
-            background: #fcfcfc;
-            border: 1px solid #C2C2C2; 
-            color:#fff;
-            padding: 1em 0 0 0;
-        &.price  {   
-               h4 {
-                   padding: 0;
-                   margin-bottom: 1em;
-               }
-               h3 {
-                    margin: 0;
-                    padding: 0;
-               }
-               h2 {
-                    color: #4280A6;                           
-               } 
-           }
-        
-        }
-    }
+/*    Footnote */
+.footnote {
+   padding: 0.8em 0;
+   color: lighten( $text-color , 60%);
 }
-
-.reservation-bottom .booking-wrap {
-    background: url('http://www.cssigniter.com/preview/santorini/files/2014/03/booking_bg.jpg') no-repeat center center;
-    margin: 50px 0;
-padding: 55px 0 50px;
-    height:auto;
-    
-}
-
 
 /*  */
 /* General Form Styling
@@ -660,7 +765,6 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: normal;
   border-radius: 0;

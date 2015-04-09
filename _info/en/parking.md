@@ -1,6 +1,6 @@
 ---
 title: Δωρεάν Parking-Internet wifi
-language: en
-image: pelion-ski.jpg
+lang: en
+image: parking.jpg
 order: 3
 ---

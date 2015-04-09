@@ -10,7 +10,7 @@ function initialize()
                     zoom: 12,
 
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.605351,22.994972), // Touba
+                    center: new google.maps.LatLng(39.424656, 23.12378), // Touba
                        
                     // How you would like to style the map. 
                     // This is where you would paste any style found on Snazzy Maps.

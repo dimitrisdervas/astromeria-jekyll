@@ -1,0 +1,20 @@
+<section class="infos">
+    <div class="info-list-wrapper">
+       {% assign infos = site.info | where:'lang', page.lang | sort: 'order' %}
+        {% for info in infos  %}
+        <div class="info {% cycle 'one', 'two', 'three', 'four','five' %}">   
+            <div class="left">
+                <img src="{{ info.image  | prepend: '/assets/frontpage-info/525x191/'  | prepend: site.baseurl }}" width="525" height="200" alt="">
+              </div>
+            <div class="right" >
+                <h4>
+                   <a href="{{ info.url }}">{{ info.title }}<br>
+                   <span>{{ site.data.strings.[page.lang].more}}</span>
+                   </a>
+                </h4>
+                <p>{{ info.content }}</p>
+             </div>
+        </div>    
+        {% endfor %}
+    </div>
+</section>

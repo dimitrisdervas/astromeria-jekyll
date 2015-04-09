@@ -1,28 +1,122 @@
+seasons:
+ - title: 
+    en: winter
+    gr: Χειμώνας
+   dates:
+    - season: high
+      date:
+       en: 1 Jan - 15 Jan
+       gr: 1 Jan - 15 Jan  
+    - season: medium
+      date: 
+       en: 16 Jan - 28 Feb
+       gr: 16 Jan - 28 Feb
+ - title:
+     en: spring
+     gr: Άνοιξη
+   dates:
+     - season: medium
+       date: 
+        en: 1 Mars - 5 Apr
+        gr: 1 Mars - 5 Apr
+     - season: high
+       date: 
+        en: 6 April - 19 April
+        gr: 6 April - 19 April
+     - season: low
+       date: 
+        en: 20 April - 31 May
+        gr: 20 April - 31 May
+ - title: 
+     en: summer
+     gr: καλοκαίρι
+   dates:
+     - season: low
+       date: 
+        en: 1 June - 19 July
+        gr: 1 June  - 19 July        
+     - season: high
+       date: 
+        en: 20 July - 30 Aug
+        gr: 20 July - 30 Aug
+ - title:
+    en: autumn
+    gr: φθινόπωρο
+   dates:
+     - season: low
+       date: 
+        en: 1 Sept - 14 Oct
+        gr: 1 Sept - 14 Oct     
+     - season: medium
+       date: 
+        en: 15 Oct - 18 Dec
+        gr: 15 Oct - 18 Dec     
+     - season: high
+       date: 
+        en: 19 Dec - 31 Dec
+        gr: 19 Dec - 31 Dec
+    
 low: 
-  en: Low Season
-  gr: Χαμηλή
-  dates:
-   - date: 20/4-19/7
-   - date: 1/9-14/10
+ en: Low Season
+ gr: Χαμηλή
 medium:
-  en: Medium Season
-  gr: Μεσαία
-  dates:
-   - date: 15/10-18/12
-   - date: 16/1-5/4
+ en: Medium Season
+ gr: Μεσαία
 high:
-  en: High Season
-  gr: Υψηλη
-  dates:
-   - date: 19/12-15/1
-   - date: 20/7-30/8
-   - date: 6/4-19/4
+ en: High Season
+ gr: Υψηλη
+ 
+   
+dates: 
+   - season: high
+     date:
+      en: 1 Jan - 15 Jan
+      gr: 1 Jan - 15 Jan
+    
+   - season: medium
+     date: 
+      en: 16 Jan - 5 April
+      gr: 16 Jan - 5 April
+     
+   - season: high
+     date: 
+      en: 6 April - 19 April
+      gr: 6 April - 19 April
+      
+   - season: low
+     date: 
+      en: 20 April - 19 July
+      gr: 20 April - 19 July
+     
+   - season: high
+     date: 
+      en: 20 July - 30 August
+      gr: 20 July - 30 August
+     
+   - season: low
+     date: 
+      en: 1 Sept - 14 Oct
+      gr: 1 Sept - 14 Oct
+     
+   - season: medium
+     date: 
+      en: 15 Oct - 18 Dec
+      gr: 15 Oct - 18 Dec
+     
+   - season: high
+     date: 
+      en: 19 Dec - 31 Dec
+      gr: 19 Dec - 31 Dec
+     
 valid: 
-   en:
-   gr: "*Οι τιμές ισχύουν εως 27 Σεπτεμβρίου '14"
+   en: Οι τιμές ισχύουν εως 27 Σεπτεμβρίου 2016
+   gr: Οι τιμές ισχύουν εως 27 Σεπτεμβρίου 2016
+night:
+   en: All prices are per night
+   gr: All prices are per night
 include: 
-   en:
-   gr: "*Οι τιμές συμπεριλαμβάνουν πρωινό."
+   en: Οι τιμές συμπεριλαμβάνουν πρωινό.
+   gr: Οι τιμές συμπεριλαμβάνουν πρωινό.
 exclude: 
-   en:
-   gr: "*Οι τιμές που ισχύουν σε περιόδους Πάσχα και Αποκριών είναι ίδιες με τις τιμές στην υψηλή περίοδο."
+   en: Οι τιμές που ισχύουν σε περιόδους Πάσχα και Αποκριών είναι ίδιες με τις τιμές στην υψηλή περίοδο.
+   gr: Οι τιμές που ισχύουν σε περιόδους Πάσχα και Αποκριών είναι ίδιες με τις τιμές στην υψηλή περίοδο.

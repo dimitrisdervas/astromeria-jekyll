@@ -1,0 +1,19 @@
+activities:
+ en:
+  - activity: Ski
+    image: 1
+  - activity: Trekking
+    image: 1
+  - activity: Night Life
+    image: 1
+  - activity: Traditional Taverns
+    image: 1
+ gr:
+  - activity: Ski
+    image: 1
+  - activity: Trekking
+    image: 1
+  - activity: Night Life
+    image: 1
+  - activity: Traditional Taverns
+    image: 1

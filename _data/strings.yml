@@ -3,11 +3,16 @@ en:
   prices: prices
   nights: nights
   night: night
-  fireplace: fireplace
+  fireplace: with fireplace
+  fireplace-included: fireplace included
   rooms: rooms
+  reviews: reviews
+  activities: activities
   facilities: facilities
   contact: contact
   book: book
+  seasons: seasons
+  more: more...
   booking:
      title: booking
      arrival: arrival
@@ -34,18 +39,25 @@ en:
      country: Country
      comments: comments
      submit: book
-  
+  footer: 
+    social: Social Networks 
+
 gr:
   offers: προσφορές
   prices: τιμές
   nights: νύχτες
   night: νύχτα
-  fireplace: τζάκι
+  fireplace: με τζάκι
+  fireplace-included: το τζάκι συμπεριλαμβάνεται
   rooms: Διαμονή
   booking: Κρατήσεις
-  facilities: Παροχές
+  activities: Δραστηριότητες
+  facilities: Εγκαταστάσεις
+  reviews: reviews
   contact: επικοινωνία
   book: κράτηση
+  seasons: περίοδοι
+  more: περισσότερα...
   booking:
      title: Κρατήσεις
      arrival: άφιξη

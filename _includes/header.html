@@ -1,13 +1,15 @@
 <header>
    
-{% include language-switcher.html %}
+{% include blocks/language-switcher.html %}
    
   <div class="menu-inside">
       <hr>
+<!-- Menu Left -->
         <div class="navigation menu-left">
             <ul>              
                  {% for menu in site.data.menu.[page.lang]  limit:3 %}               
-                    <li>      
+                    <li>    
+<!-- Accomodation menu -->
                         {% if menu.url == "/rooms" %}
                           <a  href="{{ site.baseurl }}/{{ page.lang}}{{ menu.url }}" >{{ menu.name }}</a>
                            <ul class="dropdown-menu">
@@ -23,9 +25,11 @@
                   {% endfor %}
                </ul>
             </div>
+<!--  Logo -->
             <div class="logo">
             <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/assets/logo_white.png" alt=""></a>
                 </div>
+<!--  Menu right -->
             <div class="navigation menu-right">
             <ul>
               {% for menu in  site.data.menu.[page.lang]  limit:3 offset: 3 %} 

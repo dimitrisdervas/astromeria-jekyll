@@ -1,6 +1,6 @@
 ---
 title: Ιδανική value-for-money διαμονή
-language: en
-image: pelion-ski.jpg
+lang: en
+image: value.jpg
 order: 1
 ---

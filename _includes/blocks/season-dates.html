@@ -1,0 +1,20 @@
+<div id="seasons" class="seasons">
+<!-- Block Title Seasons -->
+   <h3 class="block-title">{{ site.data.strings.[page.lang].seasons }}</h3>
+   <ul>
+      {% for season in site.data.season.seasons %} 
+         <li class="season-dates">
+<!-- Season of Year -->
+            <h3>{{ season.title.[page.lang] }} </h3>
+               {% assign current-season = season.dates %}
+                  {% for date in current-season %} 
+ <!-- Date -->
+                   <h2 class="date"> {{ date.date.[page.lang] }} </h2>
+<!-- Price Season -->
+                   {% assign current-price-season = date.season %}
+                   <h5 class="season">  {{ site.data.season.[current-price-season].[page.lang] }}</h5>  
+                  {% endfor %}
+            </li>
+      {% endfor %}
+   </ul>
+</div>

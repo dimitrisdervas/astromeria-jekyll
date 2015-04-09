@@ -1,0 +1,26 @@
+                     <div class="normal-prices prices">        
+                       <h3 class="block-title">{{ site.data.strings.[page.lang].prices }}</h3>
+                        <ul>
+                            {% for price in site.data.rooms.rooms.[page.section].prices %}
+                                <li class="price">              
+<!-- Season h4 -->
+                                    <h4><a href="#seasons"> {{ site.data.season.[price.season].[page.lang] }}</a></h4>
+
+<!-- Price No Fireplace h2 -->
+                                    <h2> {{ price.price }} </h2>
+<!-- Fireplace -->
+                                   {% if price.fireplace != nill %}
+                                   <h5>{{ site.data.strings.[page.lang].fireplace }} <span>{{ price.fireplace }}</span></h5>
+                                   {% endif %}
+<!-- Booking -->
+                                   <div class="booking-link">
+                                   <a href="/{{page.lang}}/booking">{{ site.data.strings.[page.lang].book }}</a>
+                                      </div>
+                                </li>                                           
+                            {% endfor %} 
+                        </ul>
+                                <p> *{{ site.data.season.valid.[page.lang] }} </p>
+                                <p> *{{ site.data.season.night.[page.lang] }} </p>
+                                <p> *{{ site.data.season.include.[page.lang] }} </p>
+                                <p> *{{ site.data.season.exclude.[page.lang] }} </p>
+                    </div>
