@@ -1,0 +1,12 @@
+                     <div class="amenities">        
+                       <h3 class="block-title">{{ site.data.strings.[page.lang].amenities }}</h3>
+                        <ul>
+                            {% for amenity in site.data.rooms.amenities.[page.lang] %}
+                                <li class="amenity">              
+<!-- Amenity h4 -->
+                                    <h5>{{ amenity.amenity }}</h5>
+
+                                </li>                                           
+                            {% endfor %} 
+                        </ul>
+                    </div>

@@ -1,3 +1,13 @@
+low: 
+ en: Low Season
+ gr: Χαμηλή
+medium:
+ en: Medium Season
+ gr: Μεσαία
+high:
+ en: High Season
+ gr: Υψηλη
+ 
 seasons:
  - title: 
     en: winter
@@ -56,58 +66,9 @@ seasons:
         en: 19 Dec - 31 Dec
         gr: 19 Dec - 31 Dec
     
-low: 
- en: Low Season
- gr: Χαμηλή
-medium:
- en: Medium Season
- gr: Μεσαία
-high:
- en: High Season
- gr: Υψηλη
+
  
-   
-dates: 
-   - season: high
-     date:
-      en: 1 Jan - 15 Jan
-      gr: 1 Jan - 15 Jan
-    
-   - season: medium
-     date: 
-      en: 16 Jan - 5 April
-      gr: 16 Jan - 5 April
-     
-   - season: high
-     date: 
-      en: 6 April - 19 April
-      gr: 6 April - 19 April
-      
-   - season: low
-     date: 
-      en: 20 April - 19 July
-      gr: 20 April - 19 July
-     
-   - season: high
-     date: 
-      en: 20 July - 30 August
-      gr: 20 July - 30 August
-     
-   - season: low
-     date: 
-      en: 1 Sept - 14 Oct
-      gr: 1 Sept - 14 Oct
-     
-   - season: medium
-     date: 
-      en: 15 Oct - 18 Dec
-      gr: 15 Oct - 18 Dec
-     
-   - season: high
-     date: 
-      en: 19 Dec - 31 Dec
-      gr: 19 Dec - 31 Dec
-     
+ 
 valid: 
    en: Οι τιμές ισχύουν εως 27 Σεπτεμβρίου 2016
    gr: Οι τιμές ισχύουν εως 27 Σεπτεμβρίου 2016

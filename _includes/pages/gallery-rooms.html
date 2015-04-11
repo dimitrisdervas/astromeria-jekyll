@@ -1,0 +1,22 @@
+<div class="main">
+        <div class="content">
+<!--  Page Title -->
+         <h2 class="page-title">{{ site.data.strings.[page.lang].rooms }}</h2>
+           <section class="gallery gallery-rooms">
+               {% assign rooms = site.rooms | where:'lang', page.lang | sort: 'order' %}
+               {% for room in rooms | random %}
+   
+<!--  Room Image -->
+                        {% for image in site.data.rooms.rooms.[room.section].images %}
+                            <div class="gallery-room">
+                    <a href="{{ site.baseurl }}{{ room.url }}"><img src="{{ image.image | prepend: '/assets/rooms/wide/'  | prepend: site.baseurl | prepend: site.url }} " alt=""></a>
+<!--  Room Title -->
+                    <h6 id="{{ room.section }}" class="entry-title" ><a href="{{ site.baseurl }}{{ room.url }}">{{ room.title }}</a></h6>  
+                               </div> 
+                        {% endfor %}
+
+                   
+               {% endfor %}        
+       </section>
+   </div>
+</div>

@@ -1,33 +1,54 @@
 @import "susy-config";
 @import "bower_components/susy/sass/susy";
 
+/*  */
+/* Full Page Width */
+/*  */
 header,
 .page,
 footer,
 .slider,
+.map,
 .footnote-wrapper {
     @include full;
 }
+/*  */
+/* Container Width */
+/*  */
 /* Header */
 .lang-switcher,
 .menu-inside,
 /* Frontpage */
-.frontpage-gallery,
+.gallery,
 /* all pages */
 .main,
 .content, 
 /* Custom pages */
-.booking,
 .reviews,
 /* Footer */
 .footer-inside,
 .footnote {
     @include container;
 }
+/*  */
+/* Global */
+/*  */
+.left {
+   @include span ( 50% no-gutters)
+      }
+.right {
+   @include span ( 50% last no-gutters)
+      }
+/*  */
+/* MAIN */
+/*  */
 .main {
    clear: both;
    margin-bottom: 6em;
 }
+/*  */
+/* HEADER */
+/*  */
 .menu-inside {
         .menu-left {
             @include span(6 of 15);        
@@ -43,13 +64,32 @@ footer,
         }
         
     }
-
+/*  */
+/* Sidebar - Booking Page */
+/*  */
+.content-sidebar {
+   @include span( 8 of 12 );
+   .fields-wrapper {
+      @include nested(8);
+      .left {
+         @include span ( 48% );
+            }
+      .right {
+         @include span ( 50% last);
+            }
+      }
+}
 .sidebar {
-    @include span(5 of 16 last);
+    @include span( 4 last of 12 );
+   padding: 0 10px;
 }
 
+
+/*  */
 /* Frontpage */
-.info,
+/*  */
+
+/* Info nad facility page nad frontpage */
 .facilities,
 .info-list-wrapper,
 .facility-wrapper,
@@ -57,14 +97,31 @@ footer,
 .facility
 {
     @include container;
-    .left {
-        @include span ( 6 of 12 no-gutters)
-    }
-    .right {
-         @include span ( 6 last of 12 no-gutters)
-    }
+   .left {
+   @include span ( 50% no-gutters);
+      }
+   .right {
+   @include span ( 50% last no-gutters);
+      }
 }
 
+.gallery {
+    margin-bottom: 2em;
+   .three {
+       @include gallery(4 of 12);
+    }
+   .four {
+       @include gallery(3 of 12);
+   }
+}
+/* Galleries Pages  */
+/*  */
+.gallery-room {
+   @include gallery(4 of 12);
+}
+/*  */
+/* Reviews Page */
+/*  */
 .reviews-wrapper {
    @include container;
    .review {
@@ -77,21 +134,19 @@ footer,
         
     }
 }
-.frontpage-gallery {
-    margin-bottom: 2em;
-    .item {
-    @include gallery(3 of 12);
-    }
-}
-/* Booking Page */
-.contact-booking,
-#map-canvas {
-  @include container;
+/*  */
+/* Booking Page + Map */
+/*  */
+.contact-booking {
+  margin-bottom: 2em;
+   
 }
 #map-canvas {
    height: 30em;
 }
+/*  */
 /* Footer */
+/*  */
 .footnote {
    @include container;
    clear: both;

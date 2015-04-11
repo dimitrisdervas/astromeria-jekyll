@@ -1,0 +1,16 @@
+
+   <h2 class="page-title">galleries</h2>
+<section class="frontpage-three gallery" >
+    {% for post in site.data.threecolumns.[page.lang] %}
+            <div class="item three">
+                <div class="item-thumb">
+                    <a href="{{ post.url | prepend: site.baseurl | prepend: page.lang }}">
+                        <img src="{{ post.image | prepend: '/assets/threecolumn/'  | prepend: site.baseurl }}" >
+                    </a>
+                </div>
+                <div class="item-content">
+                    <a class="item-title btn" href="{{ page.lang | prepend: site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+                </div>
+            </div>
+        {% endfor %}
+</section>

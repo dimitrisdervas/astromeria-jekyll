@@ -9,6 +9,7 @@ en:
   reviews: reviews
   activities: activities
   facilities: facilities
+  amenities: amenities
   contact: contact
   book: book
   seasons: seasons
@@ -19,17 +20,17 @@ en:
      departure: departure
      rooms: 
        - room: Double Room
-         value: Double
+         value: double
        - room: Double Room with Fireplace
-         value: DoubleFireplace
+         value: doubleFireplace
        - room: Triple Room
-         value: Triple
+         value: triple
        - room: Family Room
-         value: Family 
+         value: family 
        - room:  Appartment Two Bedrooms
-         value: TwoRooms 
+         value: twoRooms 
        - room:  Appartment Two Bedrooms with Fireplace
-         value:  TwoRoomsFireplace
+         value: twoRoomsFireplace
      room: room
      adults: Adults
      children: Children
@@ -53,7 +54,8 @@ gr:
   booking: Κρατήσεις
   activities: Δραστηριότητες
   facilities: Εγκαταστάσεις
-  reviews: reviews
+  amenities: amenities
+  reviews: σχόλια
   contact: επικοινωνία
   book: κράτηση
   seasons: περίοδοι

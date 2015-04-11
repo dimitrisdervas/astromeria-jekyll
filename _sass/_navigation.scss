@@ -8,9 +8,8 @@
         margin: 5px 0em 5px 0em;
         padding-bottom: 5px;
         text-decoration: none;
-        line-height: 45px;
+        line-height: 35px;
         font-size: 13px;
-        font-weight: bold;
     }
     a:hover {
         border-bottom: 1px solid #FFF; 
@@ -38,9 +37,9 @@
          ul li ul {
            padding: 0;
            position: absolute;
-           top: 48px;
+           top: 56px;
            left: 0;
-           width: 300px;
+           width: 240px;
            -webkit-box-shadow: none;
            -moz-box-shadow: none;
            box-shadow: none;
@@ -54,7 +53,7 @@
            -transition: opacity 0.2s;
          }
          ul li ul li { 
-           background: #555; 
+           background: #747474; 
            display: block; 
            color: #fff;
            text-shadow: 0 -1px 0 #000;

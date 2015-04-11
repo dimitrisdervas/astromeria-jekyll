@@ -6,13 +6,13 @@
                      <ul>
                                    {% for facility in  site.data.facilities.facilities.[page.lang] %}
                                    
-                                      <li class="facility">
-                                           <div class="facility {% cycle 'left', 'right' %} ">
+                                      <li class="facility {% cycle 'one', 'two', 'three', 'four','five' %} ">
+                                           <div class="{% cycle 'left', 'right' %} ">
                                             
             <img src="{{  facility.image  | prepend: '/assets/facilities/525x191/'  | prepend: site.baseurl }}" width="525" height="200" alt="">
                                         
                                             </div>
-                                           <div class="facility {% cycle 'right', 'left' %}" >
+                                           <div class="{% cycle 'right', 'left' %}" >
                                               <h1> {{ facility.facility }} </h1>
                                            </div>
                                       </li>                                           

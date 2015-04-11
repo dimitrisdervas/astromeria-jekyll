@@ -1,10 +1,35 @@
 offers:
  - nights: 5
  - nights: 3
+ 
 seasons:
  - season: low
  - season: medium
  - season: high
+ 
+amenities:
+   en:
+     - amenity: Φαξ/Φωτοτυπικό
+     - amenity: Ανεμιστήρας
+     - amenity: Θέρμανση
+     - amenity: Μπανιέρα ή Ντους
+     - amenity: Στεγνωτήρας Μαλλιών
+     - amenity: Τηλεόραση
+     - amenity: Μικρή Κουζίνα
+     - amenity: Κουζινικά Σκεύη
+     - amenity: Ψυγείο
+   gr:
+     - amenity: Φαξ/Φωτοτυπικό
+     - amenity: Ανεμιστήρας
+     - amenity: Θέρμανση
+     - amenity: Μπανιέρα ή Ντους
+     - amenity: Στεγνωτήρας Μαλλιών
+     - amenity: Τηλεόραση
+     - amenity: Μικρή Κουζίνα
+     - amenity: Κουζινικά Σκεύη
+     - amenity: Ψυγείο
+     
+     
 rooms:
   double:
      prices:
@@ -23,26 +48,31 @@ rooms:
         discount: 30%
         fireplace: 150€ 
         nights: 5
+        
       - season: medium
         price: 170€
         discount: 30%
         fireplace: 200€
         nights: 5
+        
       - season: high
         price: 200€
         discount: 30%
         fireplace: 240€
         nights: 5
+        
       - season: low
         price: 150€
         discount: 30%
         fireplace: 150€ 
         nights: 3
+        
       - season: medium
         price: 170€
         discount: 30%
         fireplace: 200€
         nights: 3
+        
       - season: high
         price: 200€
         discount: 30%
@@ -142,24 +172,3 @@ rooms:
      images:
       - image: dixoro_1.jpg
       - image: dixoro_2.jpg
-  ammenities:
-   en:
-     - facility: Φαξ/Φωτοτυπικό
-     - facility: Ανεμιστήρας
-     - facility: Θέρμανση
-     - facility: Μπανιέρα ή Ντους
-     - facility: Στεγνωτήρας Μαλλιών
-     - facility: Τηλεόραση
-     - facility: Μικρή Κουζίνα
-     - facility: Κουζινικά Σκεύη
-     - facility: Ψυγείο
-   gr:
-     - facility: Φαξ/Φωτοτυπικό
-     - facility: Ανεμιστήρας
-     - facility: Θέρμανση
-     - facility: Μπανιέρα ή Ντους
-     - facility: Στεγνωτήρας Μαλλιών
-     - facility: Τηλεόραση
-     - facility: Μικρή Κουζίνα
-     - facility: Κουζινικά Σκεύη
-     - facility: Ψυγείο

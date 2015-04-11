@@ -1,0 +1,20 @@
+en:
+ - title: outer
+   image: outer.jpg
+   url: gallery-outer
+ - title: gallery
+   image:
+   url:  gallery-rooms
+ - title: Pilio
+   image: pilio.jpg
+   url: gallery-pilio
+gr:
+ - title: εξωτερικοί χώροι
+   image: outer.jpg
+   url: gallery-outer
+ - title: gallery
+   image: 
+   url: gallery-rooms
+ - title: Πήλιο
+   image: pilio.jpg
+   url: gallery-pilio                                                                                     

@@ -22,14 +22,14 @@
                                          {% else %}
                                       <h5>{{ site.data.strings.[page.lang].fireplace-included }}</h5>    
                                       {% endif %}
-<!-- Booking -->
-                                   <div class="booking-link">                    
-                                      <a href="/{{page.lang}}/booking">{{ site.data.strings.[page.lang].book }}</a>   
+<!-- Booking Link -->
+                                         <div class="booking-link">                    
+                                            <a href="/{{page.lang}}/booking">{{ site.data.strings.[page.lang].book }}</a>   
                                          </div>
                                       </li>   
-                             {% endif %}
+                                   {% endif %}
                                   {% endfor %} 
                               </ul>
-    {% endfor %}
+                         {% endfor %}
                            <p>{{ site.data.offer.offer.valid.[page.lang] }}</p>
                       </div>

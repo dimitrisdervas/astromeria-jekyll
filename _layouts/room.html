@@ -12,8 +12,8 @@ layout: default
         <div class="flexslider-rooms">
               <ul class="slides">
                   {% for image in site.data.rooms.rooms.[page.section].images %} 
-                <li data-thumb="{{ image.image | prepend: '/assets/thumbnails/'  | prepend: site.baseurl }}" >
-                    <img src="{{ image.image | prepend: '/assets/wide/' | prepend: site.baseurl }}" alt="">
+                <li data-thumb="{{ image.image | prepend: '/assets/rooms/thumbnails/'  | prepend: site.baseurl }}" >
+                    <img src="{{ image.image | prepend: '/assets/rooms/wide/' | prepend: site.baseurl }}" alt="">
                   </li>
                   {% endfor %}
                 </ul>
@@ -21,18 +21,22 @@ layout: default
 
 
         <div class="content">
+           
          <div class="description">
          {{ page.content }} 
-           </div>   
-         {% include blocks/prices.html %}
+           </div> 
+           
+        {% include blocks/prices.html %}
          
-         {% include blocks/offers.html %}
-                    
+        {% include blocks/offers.html %}                    
            
+        {% include blocks/reviews-quote.html %}
            
+        {% include blocks/season-dates.html %}
+           
+        {% include blocks/amenities.html %}  
 
       </div>
-        {% include blocks/reviews-quote.html %}
-        {% include blocks/season-dates.html %}
+
     </div>
 </div>

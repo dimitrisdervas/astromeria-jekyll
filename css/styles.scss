@@ -87,7 +87,7 @@ p {
 /* Colors */
 /*  */
 $grey: #848484;
-$light-grey: #E5E5E5;
+$light-grey: #919191;
 $lighter-grey: #F7F7F7;
 $black: #1E1E1E;
 $blue: #428bca;
@@ -100,7 +100,8 @@ $text-color: $black;
 $a-color: $blue;
 $hover-color: $light-blue;
 $header-text: $white;
-$border-color: $light-grey;
+$border-color: lighten( $light-grey, 30%);
+$page-title: $light-grey;
 /* Frontpage Slideshow */
 $slides-text: $white;
 $button-text: $white;
@@ -112,6 +113,8 @@ $prices-color: $light-blue;
 $seasons-dates: $light-red;
 /* Blocks Background */
 $block-bg: lighten( $black, 85%);
+/* Booking */
+$submit-bg: $blue;
 /* Footer */
 $footer-bg: $lighter-grey;
 
@@ -277,6 +280,7 @@ border-top: 1px solid #eeeeee;
 /*  */
 /* BLOG */
 /*  */
+/* Page title Sitewide */
 .page-title {
 text-align: center;
 font-size: 4em;
@@ -284,6 +288,12 @@ line-height: 1;
 margin-bottom: 1em;
 padding-bottom: 1em;
 padding-top: 1.5em;
+color: $page-title;
+}
+/* page title for frontpage */
+.frontpage .page-title {
+   padding: 1em;
+   margin: 0;
 }
 .entry-title {
 margin-bottom: 20px;
@@ -329,10 +339,13 @@ margin-bottom: 20px;
 
 /*  */
 /* Frontpage INFO */
+/* Facilities */
 /*  */
-.info-list-wrapper {
+.info-list-wrapper,
+.facility-wrapper {
     margin-bottom: 2em; 
-   .info {
+   .info,
+   .facility {
       border: 4px solid #F0F0F0;
       margin-bottom: 2em;
          h4 {
@@ -373,9 +386,23 @@ margin-bottom: 20px;
       
    }
 }
+
+/* Facilities Title */
+.facility h1 {
+  padding: 25px 30px;
+  margin: 0;
+  text-align: center;
+}
 /* Single Info Page */
 .info-image {
    padding: 10px;
+}
+/* Amenities Block */
+.amenities li {
+   @include gallery( 4 of 12);
+   h5 {
+      padding: 0.5em; 
+   }
 }
 /*  */
 /* Reviews Blockquote */
@@ -463,6 +490,8 @@ margin-bottom: 20px;
     border-color: #FFF;
     color: #FFF;
     max-width: 60%;
+    background: #2A2323;
+    opacity: 0.9;
    }
    a.btn:hover {
     text-decoration: none; }
@@ -519,18 +548,7 @@ a.btn, a.btn:visited, input[type=submit] {
     transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
-/*  */
-/* ROOMS and OFFERS PAGE */ 
-/*  */
 
-
-.rooms {
-   @include full;
-   .room {
-      @include gallery ( 3 of 12 );
-      margin-bottom: 2em;
-   }
-}
 /*  */
 /* Default block Settings */
 /*  */
@@ -577,7 +595,7 @@ a.btn, a.btn:visited, input[type=submit] {
            }
         }
        }
-      .booking-link {
+      .bookin-link {
          display:block;
          text-align: center;
          a {
@@ -613,10 +631,27 @@ a.btn, a.btn:visited, input[type=submit] {
    }
 }
 /*  */
+/* ROOMS and OFFERS PAGE */ 
+/*  */
+
+
+.rooms {
+   @include full;
+   .room {
+      @include gallery ( 3 of 12 );
+      margin-bottom: 2em;
+      .prices ul li {
+         @include container;
+      }
+   }
+}
+
+/*  */
 /* Seasons */
 /*  */
 .seasons {
     @include container;
+   margin-bottom: 2em;
       ul {
       @include container;
       padding: 0;
@@ -680,10 +715,11 @@ a.btn, a.btn:visited, input[type=submit] {
 /* Reviews Page */
 /*  */
 .review-inside {
-  background: #fff;
+  background: $block-bg;
   border: 1px solid #ccc;
   padding: 1.5em;
-   h4 {
+   h2 {
+      font-weight: bold;
       padding-bottom: 0.5em;
       text-transform: uppercase;
    }   
@@ -691,6 +727,27 @@ a.btn, a.btn:visited, input[type=submit] {
       font-weight: bold;
       margin-bottom: 10px;
    }
+}
+/*  */
+/* Booking Page */
+/*  */
+
+.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea,.pure-form select  {
+   margin-bottom: 1.3em;
+   border-width: 2px;
+   border-radius: 0;
+   font-size: 14px;
+   height: auto;
+   box-shadow: none;
+   width: 100%;
+}
+
+.booking button {
+  background: $submit-bg;
+  border: $border-color;
+  color: $button-text;
+  padding: 0.5em 2em;
+  margin-bottom: 3em;
 }
 /*  */
 /* Footer */
@@ -749,7 +806,7 @@ a.btn, a.btn:visited, input[type=submit] {
 /*  */
 /* General Form Styling
 =================================== */
-label {
+/* label {
   display: block;
   font-size: 90%;
   margin-bottom: 2px; }
@@ -807,4 +864,4 @@ fieldset legend {
   margin-left: -3px; }
 
 input.highlight {
-  border-color: #ff4a4a; }
+  border-color: #ff4a4a; } */
