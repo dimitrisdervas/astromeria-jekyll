@@ -5,6 +5,7 @@ description: "Write an awesome description for your new site here. You can edit 
 baseurl: /astromeria-jekyll
 sass:
     sass_dir: _sass
+    style: :compressed
 collections:
   offers:
     output: true
@@ -21,7 +22,12 @@ defaults:
     values:
       layout: "info"
       
-      
+compress_html:
+ clippings: all
+   comments: ["<!-- ", " -->"]
+   endings: all
+   ignore:
+     envs: [local]
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 flickr:
   cache_dir:       ./_cache/flickr

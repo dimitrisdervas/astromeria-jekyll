@@ -13,4 +13,4 @@
 {% include js/rome-settings.js  %}
 {% include js/active-link.js  %}
 {% include js/remove-accents.js  %}
-{% include js/google-map.js  %}
+

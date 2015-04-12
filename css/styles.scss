@@ -22,9 +22,7 @@ $ gr-font: "Roboto"; */
 /* normalise and more */
 /*  */
 
-*, *:before, *:after {
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
+*, *:before, *:after { 
   box-sizing: border-box;
 }
 ul {
@@ -49,6 +47,7 @@ a:focus {
 /* Typography */
 /*  */
 $font-numbers: Montserrat, Helvetica, Arial, sans-serif;
+
 body {
   font-family: Roboto slab, Helvetica, Arial, sans-serif;
   line-height: 1.625;
@@ -273,7 +272,8 @@ border-top: 1px solid #eeeeee;
     .offer img {
        padding: 10px;
        border: 1px solid #C2C2C2;
-       transition: 0.18s;
+       -webkit-transition: 0.18s;
+               transition: 0.18s;
        margin: 0px 0 20px 0;
     }
 }
@@ -355,7 +355,8 @@ margin-bottom: 20px;
          img {
             padding: 0;
            border: none;
-           transition: 0.18s;
+           -webkit-transition: 0.18s;
+                   transition: 0.18s;
            margin: 0;
          }
       span {
@@ -453,7 +454,8 @@ margin-bottom: 20px;
   position: relative;
   text-align: center;
   color: #FFF;
-  transition: 0.18s;
+  -webkit-transition: 0.18s;
+          transition: 0.18s;
   margin: 0 0 40px 0; 
    .item-thumb {
     padding: 10px;
@@ -463,7 +465,8 @@ margin-bottom: 20px;
      .item-thumb > a {
       position: relative;
       display: block;
-     transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+     -webkit-transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+             transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
      }
     .item-thumb > a:after {
       content: '';
@@ -473,7 +476,8 @@ margin-bottom: 20px;
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.2);
-      transition: background-color 0.18s ease; }
+      -webkit-transition: background-color 0.18s ease;
+              transition: background-color 0.18s ease; }
    .offer {
     position: absolute;
     top: 10px;
@@ -545,7 +549,8 @@ a.btn, a.btn:visited, input[type=submit] {
     padding: 0.8em 1em;
     background: transparent;
     outline: none;
-    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+    -webkit-transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+            transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
 
@@ -714,7 +719,8 @@ a.btn, a.btn:visited, input[type=submit] {
     .flex-control-thumbs img {
     padding: 3px;
     border: 1px solid #C2C2C2;
-    transition: 0.18s;
+    -webkit-transition: 0.18s;
+            transition: 0.18s;
     margin: 0px 0 20px 0;
     }
 }
