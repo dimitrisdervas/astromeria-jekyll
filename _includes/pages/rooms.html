@@ -1,39 +1,37 @@
 <div class="main">
-        <div class="content">
+        <div class="content rooms-page">
 <!--  Page Title -->
          <h2 class="page-title">{{ site.data.strings.[page.lang].rooms }}</h2>
            <section class="rooms">
                {% assign rooms = site.rooms | where:'lang', page.lang | sort: 'order' %}
+<!-- Loop to search inside rooms -->
                {% for room in rooms %}
                  <div class="room">
 <!--  Room Title -->
-                    <h1 id="{{ room.section }}" class="entry-title" ><a href="{{ site.baseurl }}{{ room.url }}">{{ room.title }}</a></h1>  
-<!--  Room Image -->
+                    <h3 id="{{ room.section }}" class="entry-title" ><a href="{{ site.baseurl }}{{ room.url }}">{{ room.title }}</a></h3>  
+<!--  Loop for Room Image -->
                         {% for image in site.data.rooms.rooms.[room.section].images | limit: 1 %}
-                    <a href="{{ site.baseurl }}{{ room.url }}"><img src="{{ image.image | prepend: '/assets/wide/'  | prepend: site.baseurl | prepend: site.url }} " alt=""></a>
+                    <a href="{{ site.baseurl }}{{ room.url }}"><img src="{{ image.image | prepend: '/assets/rooms/wide/'  | prepend: site.baseurl | prepend: site.url }} " alt="{{ room.title }}"></a>
                         {% endfor %}
 <!-- Room Description -->
                         <!-- <p> {{ room.content }} </p> -->
 <!-- Room Prices -->
                      <div class="normal-prices prices">  
-                        
-                           <ul>
-                               {% for price in site.data.rooms.rooms.[room.section].prices %}
-                                   <li class="price">              
-<!-- Season -->
-                                       <h4> {{ site.data.season.[price.season].[page.lang] }}</h4>
+                        <ul>
+                            {% for price in site.data.rooms.rooms.[room.section].prices %}
+                                <li class="price">              
+<!-- Season h4 -->
+                                    <h4><a href="#seasons"> {{ site.data.season.[price.season].[page.lang] }}</a></h4>
 
-<!-- Price No Fireplace  -->
-                                       <h2> {{ price.price }}  </h2>
-<!-- Price with Fireplace -->
-                                      {% if price.fireplace != nill %}
-                                      <h3>{{ site.data.strings.[page.lang].fireplace }} <span>{{ price.fireplace }} / {{ site.data.strings.[page.lang].night }}</span></h3>
-                                        {% else %}
-                                      <h3>{{ site.data.strings.[page.lang].fireplace-included }}</h3> 
-                                      {% endif %}
-                                   </li>                                           
-                               {% endfor %} 
-                           </ul>
+<!-- Price No Fireplace h2 -->
+                                    <h2> {{ price.price }} </h2>
+<!-- Fireplace -->
+                                   {% if price.fireplace != nill %}
+                                      <h5>{{ site.data.strings.[page.lang].fireplace }} <span>{{ price.fireplace }}</span></h5>
+                                   {% endif %}
+                                </li>                                           
+                            {% endfor %} 
+                        </ul>
 
                         
                        </div>
