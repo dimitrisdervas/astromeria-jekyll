@@ -1,6 +1,7 @@
 ---
 layout: default
 lang: gr
+title: blog
 ---
 
 

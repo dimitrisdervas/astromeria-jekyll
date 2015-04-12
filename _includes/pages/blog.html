@@ -1,9 +1,12 @@
 <div class="main">
         <div class="content">
-        {% for blogpost in site.posts %}
-          <h1 class="entry-title">{{ blogpost.title }}   </h1> 
-        <img src="{{ blogpost.image | prepend: '/assets/blog/'  | prepend: site.baseurl | prepend: site.url }} " alt=""> 
-        <p> {{ blogpost.content }} </p>
+           <!--  Page Title -->
+         <h2 class="page-title">blog</h2>
+        {% assign blogposts = site.posts | where:'lang', page.lang | sort: category %}
+        {% for blogpost in blogposts  %}
+           <a href="{{ blogpost.url | prepend: site.baseurl }}"><h1 class="entry-title">{{ blogpost.title }}   </h1> </a>
+           <img src="{{ blogpost.image | prepend: '/assets/blog/'  | prepend: site.baseurl | prepend: site.url }} " alt=""> 
+           <p> {{ blogpost.excerpt }} </p>
         {% endfor %}
     </div>
 </div>

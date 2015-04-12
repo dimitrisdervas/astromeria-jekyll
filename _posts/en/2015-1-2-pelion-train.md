@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Pelion Train
-language: en
+lang: en
 image: pelion-train.jpg
 ---
 
@@ -13,7 +13,7 @@ Timetable
 
 Staurday and Sunday from Lechonia 11.00 – from Milies 16.00
 
-Every day during the summer. Call for confirmation
+Every day during the summer. Call for confirmation.<!-- more -->
 
 In the late 19th century, Charilaos Trikoupis, the Prime Minister at the time, decided to construct a railway network for Thessalia. The network first connected the port of Volos with Velestino and then Larissa, Farsala, Karditsa, Trikala, and Kalabaka. The railway had a gauge of 1 metre. The contractors decided to expand the network to the east, and so constructed a railway from Volos to the coastal villages of the Pagasitikos Gulf, which at that time had no public transport. The contracts between the company and the state were signed in 1895.
 

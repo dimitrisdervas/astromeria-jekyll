@@ -3,9 +3,11 @@ title: Astromeria Studios
 email: info@astromeria-hotel.gr
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 baseurl: /astromeria-jekyll
+
 sass:
     sass_dir: _sass
     style: :compressed
+    
 collections:
   offers:
     output: true
@@ -14,27 +16,24 @@ collections:
     permalink: /:path/
   info: 
     output: true
+    
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "info" # previously `post` in Jekyll 2.2.
     values:
       layout: "info"
       
+excerpt_separator: "<!-- more -->"  
+
 compress_html:
- clippings: all
+   clippings: all
    comments: ["<!-- ", " -->"]
    endings: all
    ignore:
      envs: [local]
+     
 exclude: ["node_modules", "gulpfile.js", "package.json"]
-flickr:
-  cache_dir:       ./_cache/flickr
-  api_key:          7684e2b7ad1110d32d3e28a17f676641
-  shared_secret:    7f5b0c967035b378
-  access_token:     72157650368929491-ac4b09781bd9ee67
-  access_secret:    db04f75dfdf3b027
   
 # Build settings
 markdown: kramdown
