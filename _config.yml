@@ -1,40 +1,37 @@
-# Site settings
 title: Astromeria Studios
-email: info@astromeria-hotel.gr
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-baseurl: /astromeria-jekyll
-
+email: "info@astromeria-hotel.gr"
+description: Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+baseurl: ""
 sass:
-    sass_dir: _sass
-    style: :compressed
-    
+  sass_dir: _sass
+  style: ":compressed"
 collections:
   offers:
     output: true
   rooms:
     output: true
-    permalink: /:path/
-  info: 
+    permalink: "/:path/"
+  info:
     output: true
-    
 defaults:
   - scope:
-      path: "" # an empty string here means all files in the project
-      type: "info" # previously `post` in Jekyll 2.2.
+      path: ""
+      type: info
     values:
-      layout: "info"
-      
-excerpt_separator: "<!-- more -->"  
-
+      layout: info
+excerpt_separator: "<!-- more -->"
 compress_html:
-   clippings: all
-   comments: ["<!-- ", " -->"]
-   endings: all
-   ignore:
-     envs: [local]
-     
-exclude: ["node_modules", "gulpfile.js", "package.json"]
-  
-# Build settings
+  clippings: all
+  comments:
+    - "<!--"
+    - "-->"
+  endings: all
+  ignore:
+    envs:
+      - local
+exclude:
+  - node_modules
+  - gulpfile.js
+  - package.json
 markdown: kramdown
 permalink: pretty
